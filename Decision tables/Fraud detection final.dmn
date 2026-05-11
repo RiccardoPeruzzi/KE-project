@@ -1,0 +1,2028 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<semantic:definitions xmlns:semantic="https://www.omg.org/spec/DMN/20240513/MODEL/"  xmlns:sdmn="https://www.omg.org/spec/SDMN/"  xmlns:triso="http://www.trisotech.com/2015/triso/modeling"  xmlns:dmndi="https://www.omg.org/spec/DMN/20230324/DMNDI/"  xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/"  xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/"  xmlns:trisodmn="http://www.trisotech.com/2016/triso/dmn"  xmlns:feel="https://www.omg.org/spec/DMN/20240513/FEEL/"  xmlns:tc="http://www.omg.org/spec/DMN/20160719/testcase"  xmlns:drools="http://www.drools.org/kie/dmn/1.1"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:rss="http://purl.org/rss/2.0/"  xmlns:openapi="https://openapis.org/omg/extension/1.0"  xmlns:xsd="http://www.w3.org/2001/XMLSchema"   xmlns:i18n="http://www.omg.org/spec/BPMN/non-normative/extensions/i18n/1.0"  xmlns="http://www.trisotech.com/definitions/_479427d2-a85d-4dca-b8e2-40dd73cdd213" id="_479427d2-a85d-4dca-b8e2-40dd73cdd213" name="Fraud detection final" namespace="http://www.trisotech.com/definitions/_479427d2-a85d-4dca-b8e2-40dd73cdd213" exporter="Decision Modeler" exporterVersion="12.13.7" xml:lang="en" triso:logoChoice="Default">
+    <semantic:extensionElements/>
+    <semantic:itemDefinition name="Country" label="Country">
+        <semantic:typeRef>string</semantic:typeRef>
+        <semantic:allowedValues>
+            <semantic:extensionElements>
+                <triso:constraintDetails id="_bcdbf666-f766-438b-99d0-d4588c752670" constraintsType="enumeration">
+                    <triso:value>"Albania","Andorra","Austria","Belarus","Belgium","Bosnia and Herzegovina","Bulgaria","Croatia","Cyprus","Czech Republic","Denmark","Estonia","Finland","France","Germany","Greece","Hungary","Iceland","Ireland","Italy","Kosovo","Latvia","Liechtenstein","Lithuania","Luxembourg","Malta","Moldova","Monaco","Montenegro","Netherlands","North Macedonia","Norway","Poland","Portugal","Romania","San Marino","Serbia","Slovakia","Slovenia","Spain","Sweden","Switzerland","Ukraine","United Kingdom","Vatican City","Algeria","Angola","Benin","Botswana","Burkina Faso","Burundi","Cabo Verde","Cameroon","Central African Republic","Chad","Comoros","Democratic Republic of the Congo","Djibouti","Egypt","Equatorial Guinea","Eritrea","Eswatini","Ethiopia","Gabon","Gambia","Ghana","Guinea","Guinea-Bissau","Ivory Coast (Côte d'Ivoire)","Kenya","Lesotho","Liberia","Libya","Madagascar","Malawi","Mali","Mauritania","Mauritius","Morocco","Mozambique","Namibia","Niger","Nigeria","Republic of the Congo","Rwanda","Sao Tome and Principe","Senegal","Seychelles","Sierra Leone","Somalia","South Africa","South Sudan","Sudan","Tanzania","Togo","Tunisia","Uganda","Zambia","Zimbabwe"</triso:value>
+                    <triso:display>"Albania", "Andorra", "Austria", "Belarus", "Belgium", "Bosnia and Herzegovina", "Bulgaria", "Croatia", "Cyprus", "Czech Republic", "Denmark", "Estonia", "Finland", "France", "Germany", "Greece", "Hungary", "Iceland", "Ireland", "Italy", "Kosovo", "Latvia", "Liechtenstein", "Lithuania", "Luxembourg", "Malta", "Moldova", "Monaco", "Montenegro", "Netherlands", "North Macedonia", "Norway", "Poland", "Portugal", "Romania", "San Marino", "Serbia", "Slovakia", "Slovenia", "Spain", "Sweden", "Switzerland", "Ukraine", "United Kingdom", "Vatican City", "Algeria", "Angola", "Benin", "Botswana", "Burkina Faso", "Burundi", "Cabo Verde", "Cameroon", "Central African Republic", "Chad", "Comoros", "Democratic Republic of the Congo", "Djibouti", "Egypt", "Equatorial Guinea", "Eritrea", "Eswatini", "Ethiopia", "Gabon", "Gambia", "Ghana", "Guinea", "Guinea-Bissau", "Ivory Coast (Côte d'Ivoire)", "Kenya", "Lesotho", "Liberia", "Libya", "Madagascar", "Malawi", "Mali", "Mauritania", "Mauritius", "Morocco", "Mozambique", "Namibia", "Niger", "Nigeria", "Republic of the Congo", "Rwanda", "Sao Tome and Principe", "Senegal", "Seychelles", "Sierra Leone", "Somalia", "South Africa", "South Sudan", "Sudan", "Tanzania", "Togo", "Tunisia", "Uganda", "Zambia", "Zimbabwe"</triso:display>
+                    <triso:choices>
+                        <triso:value>"Albania"</triso:value>
+                        <triso:display>"Albania"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Andorra"</triso:value>
+                        <triso:display>"Andorra"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Austria"</triso:value>
+                        <triso:display>"Austria"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Belarus"</triso:value>
+                        <triso:display>"Belarus"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Belgium"</triso:value>
+                        <triso:display>"Belgium"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Bosnia and Herzegovina"</triso:value>
+                        <triso:display>"Bosnia and Herzegovina"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Bulgaria"</triso:value>
+                        <triso:display>"Bulgaria"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Croatia"</triso:value>
+                        <triso:display>"Croatia"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Cyprus"</triso:value>
+                        <triso:display>"Cyprus"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Czech Republic"</triso:value>
+                        <triso:display>"Czech Republic"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Denmark"</triso:value>
+                        <triso:display>"Denmark"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Estonia"</triso:value>
+                        <triso:display>"Estonia"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Finland"</triso:value>
+                        <triso:display>"Finland"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"France"</triso:value>
+                        <triso:display>"France"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Germany"</triso:value>
+                        <triso:display>"Germany"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Greece"</triso:value>
+                        <triso:display>"Greece"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Hungary"</triso:value>
+                        <triso:display>"Hungary"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Iceland"</triso:value>
+                        <triso:display>"Iceland"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Ireland"</triso:value>
+                        <triso:display>"Ireland"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Italy"</triso:value>
+                        <triso:display>"Italy"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Kosovo"</triso:value>
+                        <triso:display>"Kosovo"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Latvia"</triso:value>
+                        <triso:display>"Latvia"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Liechtenstein"</triso:value>
+                        <triso:display>"Liechtenstein"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Lithuania"</triso:value>
+                        <triso:display>"Lithuania"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Luxembourg"</triso:value>
+                        <triso:display>"Luxembourg"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Malta"</triso:value>
+                        <triso:display>"Malta"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Moldova"</triso:value>
+                        <triso:display>"Moldova"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Monaco"</triso:value>
+                        <triso:display>"Monaco"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Montenegro"</triso:value>
+                        <triso:display>"Montenegro"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Netherlands"</triso:value>
+                        <triso:display>"Netherlands"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"North Macedonia"</triso:value>
+                        <triso:display>"North Macedonia"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Norway"</triso:value>
+                        <triso:display>"Norway"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Poland"</triso:value>
+                        <triso:display>"Poland"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Portugal"</triso:value>
+                        <triso:display>"Portugal"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Romania"</triso:value>
+                        <triso:display>"Romania"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"San Marino"</triso:value>
+                        <triso:display>"San Marino"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Serbia"</triso:value>
+                        <triso:display>"Serbia"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Slovakia"</triso:value>
+                        <triso:display>"Slovakia"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Slovenia"</triso:value>
+                        <triso:display>"Slovenia"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Spain"</triso:value>
+                        <triso:display>"Spain"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Sweden"</triso:value>
+                        <triso:display>"Sweden"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Switzerland"</triso:value>
+                        <triso:display>"Switzerland"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Ukraine"</triso:value>
+                        <triso:display>"Ukraine"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"United Kingdom"</triso:value>
+                        <triso:display>"United Kingdom"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Vatican City"</triso:value>
+                        <triso:display>"Vatican City"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Algeria"</triso:value>
+                        <triso:display>"Algeria"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Angola"</triso:value>
+                        <triso:display>"Angola"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Benin"</triso:value>
+                        <triso:display>"Benin"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Botswana"</triso:value>
+                        <triso:display>"Botswana"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Burkina Faso"</triso:value>
+                        <triso:display>"Burkina Faso"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Burundi"</triso:value>
+                        <triso:display>"Burundi"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Cabo Verde"</triso:value>
+                        <triso:display>"Cabo Verde"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Cameroon"</triso:value>
+                        <triso:display>"Cameroon"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Central African Republic"</triso:value>
+                        <triso:display>"Central African Republic"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Chad"</triso:value>
+                        <triso:display>"Chad"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Comoros"</triso:value>
+                        <triso:display>"Comoros"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Democratic Republic of the Congo"</triso:value>
+                        <triso:display>"Democratic Republic of the Congo"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Djibouti"</triso:value>
+                        <triso:display>"Djibouti"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Egypt"</triso:value>
+                        <triso:display>"Egypt"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Equatorial Guinea"</triso:value>
+                        <triso:display>"Equatorial Guinea"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Eritrea"</triso:value>
+                        <triso:display>"Eritrea"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Eswatini"</triso:value>
+                        <triso:display>"Eswatini"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Ethiopia"</triso:value>
+                        <triso:display>"Ethiopia"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Gabon"</triso:value>
+                        <triso:display>"Gabon"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Gambia"</triso:value>
+                        <triso:display>"Gambia"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Ghana"</triso:value>
+                        <triso:display>"Ghana"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Guinea"</triso:value>
+                        <triso:display>"Guinea"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Guinea-Bissau"</triso:value>
+                        <triso:display>"Guinea-Bissau"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Ivory Coast (Côte d'Ivoire)"</triso:value>
+                        <triso:display>"Ivory Coast (Côte d'Ivoire)"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Kenya"</triso:value>
+                        <triso:display>"Kenya"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Lesotho"</triso:value>
+                        <triso:display>"Lesotho"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Liberia"</triso:value>
+                        <triso:display>"Liberia"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Libya"</triso:value>
+                        <triso:display>"Libya"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Madagascar"</triso:value>
+                        <triso:display>"Madagascar"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Malawi"</triso:value>
+                        <triso:display>"Malawi"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Mali"</triso:value>
+                        <triso:display>"Mali"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Mauritania"</triso:value>
+                        <triso:display>"Mauritania"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Mauritius"</triso:value>
+                        <triso:display>"Mauritius"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Morocco"</triso:value>
+                        <triso:display>"Morocco"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Mozambique"</triso:value>
+                        <triso:display>"Mozambique"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Namibia"</triso:value>
+                        <triso:display>"Namibia"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Niger"</triso:value>
+                        <triso:display>"Niger"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Nigeria"</triso:value>
+                        <triso:display>"Nigeria"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Republic of the Congo"</triso:value>
+                        <triso:display>"Republic of the Congo"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Rwanda"</triso:value>
+                        <triso:display>"Rwanda"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Sao Tome and Principe"</triso:value>
+                        <triso:display>"Sao Tome and Principe"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Senegal"</triso:value>
+                        <triso:display>"Senegal"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Seychelles"</triso:value>
+                        <triso:display>"Seychelles"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Sierra Leone"</triso:value>
+                        <triso:display>"Sierra Leone"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Somalia"</triso:value>
+                        <triso:display>"Somalia"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"South Africa"</triso:value>
+                        <triso:display>"South Africa"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"South Sudan"</triso:value>
+                        <triso:display>"South Sudan"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Sudan"</triso:value>
+                        <triso:display>"Sudan"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Tanzania"</triso:value>
+                        <triso:display>"Tanzania"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Togo"</triso:value>
+                        <triso:display>"Togo"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Tunisia"</triso:value>
+                        <triso:display>"Tunisia"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Uganda"</triso:value>
+                        <triso:display>"Uganda"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Zambia"</triso:value>
+                        <triso:display>"Zambia"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Zimbabwe"</triso:value>
+                        <triso:display>"Zimbabwe"</triso:display>
+                    </triso:choices>
+                </triso:constraintDetails>
+            </semantic:extensionElements>
+            <semantic:text>"Albania","Andorra","Austria","Belarus","Belgium","Bosnia and Herzegovina","Bulgaria","Croatia","Cyprus","Czech Republic","Denmark","Estonia","Finland","France","Germany","Greece","Hungary","Iceland","Ireland","Italy","Kosovo","Latvia","Liechtenstein","Lithuania","Luxembourg","Malta","Moldova","Monaco","Montenegro","Netherlands","North Macedonia","Norway","Poland","Portugal","Romania","San Marino","Serbia","Slovakia","Slovenia","Spain","Sweden","Switzerland","Ukraine","United Kingdom","Vatican City","Algeria","Angola","Benin","Botswana","Burkina Faso","Burundi","Cabo Verde","Cameroon","Central African Republic","Chad","Comoros","Democratic Republic of the Congo","Djibouti","Egypt","Equatorial Guinea","Eritrea","Eswatini","Ethiopia","Gabon","Gambia","Ghana","Guinea","Guinea-Bissau","Ivory Coast (Côte d'Ivoire)","Kenya","Lesotho","Liberia","Libya","Madagascar","Malawi","Mali","Mauritania","Mauritius","Morocco","Mozambique","Namibia","Niger","Nigeria","Republic of the Congo","Rwanda","Sao Tome and Principe","Senegal","Seychelles","Sierra Leone","Somalia","South Africa","South Sudan","Sudan","Tanzania","Togo","Tunisia","Uganda","Zambia","Zimbabwe"</semantic:text>
+        </semantic:allowedValues>
+    </semantic:itemDefinition>
+    <semantic:itemDefinition name="Continent_Special" label="Continent&amp;Special">
+        <semantic:typeRef>string</semantic:typeRef>
+        <semantic:allowedValues>
+            <semantic:extensionElements>
+                <triso:constraintDetails id="_644204fe-b022-4536-861a-aa91a0b1fd4b" constraintsType="enumeration">
+                    <triso:value>"Europe","Africa","Other"</triso:value>
+                    <triso:display>"Europe", "Africa", "Other"</triso:display>
+                    <triso:choices>
+                        <triso:value>"Europe"</triso:value>
+                        <triso:display>"Europe"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Africa"</triso:value>
+                        <triso:display>"Africa"</triso:display>
+                    </triso:choices>
+                    <triso:choices>
+                        <triso:value>"Other"</triso:value>
+                        <triso:display>"Other"</triso:display>
+                    </triso:choices>
+                </triso:constraintDetails>
+            </semantic:extensionElements>
+            <semantic:text>"Europe","Africa","Other"</semantic:text>
+        </semantic:allowedValues>
+    </semantic:itemDefinition>
+    <semantic:decisionService id="_479427d2-a85d-4dca-b8e2-40dd73cdd213_DS" name="Whole Model Decision Service" triso:dynamicDecisionService="true" triso:wholeModelService="true">
+        <semantic:variable name="Whole Model Decision Service" id="_479427d2-a85d-4dca-b8e2-40dd73cdd213_DS_VAR" typeRef="Any"/>
+        <semantic:outputDecision href="#_f6cfcb53-84cd-4cd2-a324-c881073e5092"/>
+        <semantic:encapsulatedDecision href="#_daa8a04c-91e6-4a73-9d71-aaa51eb4a62c"/>
+        <semantic:encapsulatedDecision href="#_64f21730-f8e3-4d9d-8abe-0306cadcebbb"/>
+        <semantic:encapsulatedDecision href="#_7188453d-9ea5-40b9-9acf-c8403c0e8110"/>
+        <semantic:encapsulatedDecision href="#_4079a632-841b-446e-93e6-b90bc5c8e846"/>
+        <semantic:encapsulatedDecision href="#_07881d80-1cd2-48bb-bc18-44530556ff47"/>
+        <semantic:inputData href="#_badd2cfe-2f42-4ce3-8142-4c1a40548a38"/>
+        <semantic:inputData href="#_c1952761-f378-4f7c-ac74-5346b2de790b"/>
+        <semantic:inputData href="#_d8aa6b0b-8f33-40cc-91e3-ddb647125a9b"/>
+    </semantic:decisionService>
+    <semantic:decisionService id="_464d08fa-2223-4e88-815e-60be6624c3af_DS" name="Diagram Page 1" triso:dynamicDecisionService="true">
+        <semantic:variable name="Diagram Page 1" id="_464d08fa-2223-4e88-815e-60be6624c3af_DS_VAR" typeRef="Any"/>
+        <semantic:outputDecision href="#_f6cfcb53-84cd-4cd2-a324-c881073e5092"/>
+        <semantic:encapsulatedDecision href="#_daa8a04c-91e6-4a73-9d71-aaa51eb4a62c"/>
+        <semantic:encapsulatedDecision href="#_64f21730-f8e3-4d9d-8abe-0306cadcebbb"/>
+        <semantic:encapsulatedDecision href="#_7188453d-9ea5-40b9-9acf-c8403c0e8110"/>
+        <semantic:encapsulatedDecision href="#_4079a632-841b-446e-93e6-b90bc5c8e846"/>
+        <semantic:encapsulatedDecision href="#_07881d80-1cd2-48bb-bc18-44530556ff47"/>
+        <semantic:inputData href="#_badd2cfe-2f42-4ce3-8142-4c1a40548a38"/>
+        <semantic:inputData href="#_c1952761-f378-4f7c-ac74-5346b2de790b"/>
+        <semantic:inputData href="#_d8aa6b0b-8f33-40cc-91e3-ddb647125a9b"/>
+    </semantic:decisionService>
+    <semantic:inputData id="_badd2cfe-2f42-4ce3-8142-4c1a40548a38" name="Amount" triso:readOnly="false">
+        <semantic:variable name="Amount" id="_39cefc86-e80a-492b-af3a-ab04899c0e2c" typeRef="number"/>
+    </semantic:inputData>
+    <semantic:decision id="_daa8a04c-91e6-4a73-9d71-aaa51eb4a62c" name="Amount_Risk" triso:readOnly="false">
+        <semantic:variable name="Amount_Risk" id="_cf10829b-7e2c-473e-8f60-6f116cd47950" typeRef="number"/>
+        <semantic:informationRequirement id="_b5c96c79-ac5a-4df6-b325-7f77cea83a4d" triso:readOnly="false">
+            <semantic:requiredInput href="#_badd2cfe-2f42-4ce3-8142-4c1a40548a38"/>
+        </semantic:informationRequirement>
+        <semantic:decisionTable triso:descriptionVisible="false" id="_51d0fd76-e206-45d0-a3a1-26ff9fe571d6" hitPolicy="UNIQUE" outputLabel="Amount_Risk" typeRef="number" triso:expressionId="_d597b385-d389-4396-8de1-ac39755e814d">
+            <semantic:input id="_766f17ce-6843-45c0-a12d-b28cfd233bec" label="Amount">
+                <semantic:inputExpression typeRef="number">
+                    <semantic:text>Amount</semantic:text>
+                </semantic:inputExpression>
+            </semantic:input>
+            <semantic:output id="_335dba14-2b13-48e7-96e6-4ae8e933690f" triso:allowNull="true" typeRef="number"/>
+            <semantic:annotation name="Description"/>
+            <semantic:rule id="_ffbeccbd-40df-40fe-81c6-d4d817c69d03">
+                <semantic:inputEntry id="_50acfd5f-4a65-497b-a92c-a97f797519a5">
+                    <semantic:text>&lt;1000</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_0c97fca0-be85-4006-afb0-6cc439ae1532">
+                    <semantic:text>10</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_09d3623e-257f-4baf-ba06-2b6f6079688f">
+                <semantic:inputEntry id="_edfe337b-cade-4d7c-83ff-b1b716a98e6f">
+                    <semantic:text>[1000..10000]</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_a6ecf802-9201-45c7-b33c-6f5882949e5d">
+                    <semantic:text>60</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_2b5d3b26-a521-4d99-a81f-c63131fcb8b7">
+                <semantic:inputEntry id="_cc1d619f-171c-4017-97df-9ba430fce983">
+                    <semantic:text>&gt;10000</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_a1e05748-4c6e-4d13-8177-129e1189d8cc">
+                    <semantic:text>90</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+        </semantic:decisionTable>
+    </semantic:decision>
+    <semantic:inputData id="_c1952761-f378-4f7c-ac74-5346b2de790b" name="Country_Merchant" triso:readOnly="false">
+        <semantic:variable name="Country_Merchant" id="_da71f04f-e194-491e-b2f3-7da48847aa34" typeRef="Country"/>
+    </semantic:inputData>
+    <semantic:businessKnowledgeModel id="_31da1856-7b3f-49d9-859e-237b6b9f72aa" name="Country_Continent" triso:readOnly="false">
+        <semantic:variable name="Country_Continent" id="_060c619d-c78f-45c9-a153-5a5afccead4b" typeRef="Continent_Special"/>
+        <semantic:encapsulatedLogic typeRef="Continent_Special" triso:descriptionVisible="false" triso:expressionId="_3b47aa90-ce43-473e-848a-009ec1123212">
+            <semantic:formalParameter name="Country_Mercant" typeRef="Country"/>
+            <semantic:decisionTable id="_a7f33c05-efd2-4342-8163-ca77a2f06d7b" hitPolicy="FIRST" outputLabel="Country_Continent" typeRef="Continent_Special">
+                <semantic:input id="_26d397a7-7b2e-480c-ac71-46c5670f5fc7" triso:allowNull="false" label="Country_Mercant">
+                    <semantic:inputExpression typeRef="Country">
+                        <semantic:text>Country_Mercant</semantic:text>
+                    </semantic:inputExpression>
+                    <semantic:inputValues triso:constraintsType="enumeration">
+                        <semantic:text>"Albania","Andorra","Austria","Belarus","Belgium","Bosnia and Herzegovina","Bulgaria","Croatia","Cyprus","Czech Republic","Denmark","Estonia","Finland","France","Germany","Greece","Hungary","Iceland","Ireland","Italy","Kosovo","Latvia","Liechtenstein","Lithuania","Luxembourg","Malta","Moldova","Monaco","Montenegro","Netherlands","North Macedonia","Norway","Poland","Portugal","Romania","San Marino","Serbia","Slovakia","Slovenia","Spain","Sweden","Switzerland","Ukraine","United Kingdom","Vatican City","Algeria","Angola","Benin","Botswana","Burkina Faso","Burundi","Cabo Verde","Cameroon","Central African Republic","Chad","Comoros","Democratic Republic of the Congo","Djibouti","Egypt","Equatorial Guinea","Eritrea","Eswatini","Ethiopia","Gabon","Gambia","Ghana","Guinea","Guinea-Bissau","Ivory Coast (Côte d'Ivoire)","Kenya","Lesotho","Liberia","Libya","Madagascar","Malawi","Mali","Mauritania","Mauritius","Morocco","Mozambique","Namibia","Niger","Nigeria","Republic of the Congo","Rwanda","Sao Tome and Principe","Senegal","Seychelles","Sierra Leone","Somalia","South Africa","South Sudan","Sudan","Tanzania","Togo","Tunisia","Uganda","Zambia","Zimbabwe"</semantic:text>
+                    </semantic:inputValues>
+                </semantic:input>
+                <semantic:output id="_7e70d147-76e6-4409-874a-0f908723acf1" triso:allowNull="true" typeRef="Continent_Special">
+                    <semantic:outputValues triso:constraintsType="enumeration">
+                        <semantic:text>"Europe","Africa","Other",null</semantic:text>
+                    </semantic:outputValues>
+                </semantic:output>
+                <semantic:annotation name="Description"/>
+                <semantic:rule id="_45db96ab-79ab-413b-8460-e93323e01148">
+                    <semantic:inputEntry id="_fe885949-4703-40c6-ad96-90f8ac0c2763">
+                        <semantic:text>"Italy"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_b7b1fb80-ac96-4fbd-b84a-eb9fccd6f111">
+                        <semantic:text>"Europe"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_ea937abb-bfac-4dae-901f-8b52b7e9b7c0">
+                    <semantic:inputEntry id="_86b7d4ae-65fb-4ea5-b777-689d8d4ec830">
+                        <semantic:text>"Switzerland"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_38706ee0-6d24-4778-a8ae-0dce8a5cc3c7">
+                        <semantic:text>"Europe"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_c83c1481-5aac-42d7-b958-016a5a910149">
+                    <semantic:inputEntry id="_4e5aa0a6-eed8-4c7f-9c5e-535b14c2eed0">
+                        <semantic:text>"Germany"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_b64744d4-8705-4f6a-9a5b-c2933b9fc5bc">
+                        <semantic:text>"Europe"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_e2a40973-f79b-4aa7-879a-266390e5a1b6">
+                    <semantic:inputEntry id="_266e8a46-a10d-4f8e-a6e3-68fe29ccf767">
+                        <semantic:text>"Morocco"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_23aef84f-b9df-46e5-89cb-f57078c8fc05">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_d1778016-6d28-4a86-9fb6-fd760c6b12f3">
+                    <semantic:inputEntry id="_f4a0af44-d629-46e6-8545-d4fd4968afcb">
+                        <semantic:text>"South Africa"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_f745ea62-230f-4a42-9c95-1c22ad1f0534">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_8d4adf71-4f2b-4c83-93e9-112ea5681698">
+                    <semantic:inputEntry id="_2eff9477-2a78-4246-8452-9845abab81d7">
+                        <semantic:text>"Albania"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_acbad994-3541-4927-98f7-764bed8f4722">
+                        <semantic:text>"Europe"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_4f8f64cc-a037-495a-b95b-45d7dfafcdb4">
+                    <semantic:inputEntry id="_dfdd85be-3c62-4b81-ba5c-eda4b6e4a4da">
+                        <semantic:text>"Andorra"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_f44224f9-501f-4fd4-9423-d6229bf75904">
+                        <semantic:text>"Europe"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_7003b954-0f19-40b0-91ca-fa0fb85607f7">
+                    <semantic:inputEntry id="_18602dc4-f73a-41eb-abe9-31f4dcc0e87f">
+                        <semantic:text>"Austria"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_263f8d40-f82e-4b21-8b22-1754e4aa83e8">
+                        <semantic:text>"Europe"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_38a86fe9-5ae4-452e-8287-04925a944c4f">
+                    <semantic:inputEntry id="_6ea73542-2025-4c9e-83ff-d1ac4525d1b5">
+                        <semantic:text>"Belarus"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_909f89da-08b7-4ba1-8673-559ef97def28">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_ac6a3165-429d-4326-bc06-79ffe97ec831">
+                    <semantic:inputEntry id="_42e5303f-eab8-4fd2-89cc-79046556346a">
+                        <semantic:text>"Belgium"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_1db5f2e1-abd3-4c82-867d-22ce0fc8eef5">
+                        <semantic:text>"Europe"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_b4c3afae-f256-4cd1-a71f-46bb0df9f8e4">
+                    <semantic:inputEntry id="_64bacdb0-d7fc-4480-a966-f84c475b885d">
+                        <semantic:text>"Bosnia and Herzegovina"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_eeda987b-b338-49f1-963e-2bf57be8e5bf">
+                        <semantic:text>"Europe"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_a3a95cf4-aaf5-4e03-86d7-3e0461cb1ed5">
+                    <semantic:inputEntry id="_9a97ce6d-6a6e-497d-a76f-4681677630b5">
+                        <semantic:text>"Bulgaria"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_106e7b9b-ca14-4da5-b10d-4a83ea5d15e3">
+                        <semantic:text>"Europe"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_ca7296f1-6489-4be0-aad3-af0cad9ba5bd">
+                    <semantic:inputEntry id="_bc89040e-d0af-43d9-bfae-ae1f1be0ce97">
+                        <semantic:text>"Croatia"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_544c5492-13c0-48e3-bf19-ee56b3fdc5fc">
+                        <semantic:text>"Europe"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_9a3feb3e-a6ab-498f-a291-ef4a85e06d2c">
+                    <semantic:inputEntry id="_a49b2a35-3d92-47e3-8d13-b8a1ffa5a2ca">
+                        <semantic:text>"Cyprus"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_4e7bdf8d-8e06-40e9-a074-5295b09d9545">
+                        <semantic:text>"Europe"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_b6a210c1-0af4-4278-ae14-dfac01e1eb73">
+                    <semantic:inputEntry id="_e88e8a55-5698-409f-beb5-f02b1972a141">
+                        <semantic:text>"Czech Republic"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_ca2d87a1-f065-4cf1-b88a-1336381d470e">
+                        <semantic:text>"Europe"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_d2b7500c-b1f4-4eb9-b191-a2b5e8ebefae">
+                    <semantic:inputEntry id="_e5bb37b9-f842-4b04-9e32-669b4da35bd7">
+                        <semantic:text>"Denmark"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_9620ad80-82e9-4e54-9870-dd1c16ad4680">
+                        <semantic:text>"Europe"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_227faf72-a81d-45f5-b7d1-0cd67eba5ea0">
+                    <semantic:inputEntry id="_8c93c0a0-de35-4657-9aa3-c78fb2f5493d">
+                        <semantic:text>"Estonia"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_77a11502-8dc1-4da5-8188-87a0796d26d6">
+                        <semantic:text>"Europe"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_d32d718e-bb04-4390-9cc9-e08f2b04ea6e">
+                    <semantic:inputEntry id="_93d8e52a-98fc-472d-8d12-14de490c9d29">
+                        <semantic:text>"Finland"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_eb39fb66-ea8b-43de-890a-4915769874aa">
+                        <semantic:text>"Europe"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_67513c54-8898-46a7-822b-59b1d5f58029">
+                    <semantic:inputEntry id="_940d8bc9-870f-4fc3-ad09-2d2400684842">
+                        <semantic:text>"France"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_5e4f2a97-8bd3-4a9c-9ef7-c8055e1bd9c8">
+                        <semantic:text>"Europe"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_44648571-accf-4d7f-97b8-804209f9eac4">
+                    <semantic:inputEntry id="_bc023aaf-0e5d-432f-a985-bea06274a1d3">
+                        <semantic:text>"Greece"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_bc704220-1869-4948-99d9-c8e74bc375db">
+                        <semantic:text>"Europe"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_013885e8-635c-4785-94b6-ccae6071c04e">
+                    <semantic:inputEntry id="_891eb98f-6276-4c87-8e90-f2e464682d42">
+                        <semantic:text>"Hungary"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_f7565513-3568-4125-b53f-dc1f16e002ec">
+                        <semantic:text>"Europe"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_4b173f55-59ef-4c52-a6ee-98eabe1fc3c2">
+                    <semantic:inputEntry id="_0707c1e5-9c59-44cb-9b61-843e71720b1c">
+                        <semantic:text>"Iceland"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_34bc8a9f-8f41-4db6-a57b-22fce0e14108">
+                        <semantic:text>"Europe"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_13e5f23d-ff64-4fae-a151-648813194012">
+                    <semantic:inputEntry id="_7cd23032-8b1b-482e-8f47-40b7deb4b065">
+                        <semantic:text>"Ireland"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_526d602c-f5f3-4cce-a3ae-7a091d8f81c1">
+                        <semantic:text>"Europe"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_420388e2-195f-4e14-a2b2-1fec6f7920c9">
+                    <semantic:inputEntry id="_627f8f17-238c-466c-b2d7-8330d04c8376">
+                        <semantic:text>"Kosovo"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_45293d71-fcd8-4cb5-b0bc-593f8afe0da5">
+                        <semantic:text>"Europe"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_49d5a539-724f-48fa-b884-e98c596bafd8">
+                    <semantic:inputEntry id="_c5d612a3-1707-401d-a066-9e3c8170661e">
+                        <semantic:text>"Latvia"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_8c500d37-23ac-4e13-b23e-39addd6713ec">
+                        <semantic:text>"Europe"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_57befb07-6ac5-45b9-873c-e528219d3c0c">
+                    <semantic:inputEntry id="_0c37c0ce-2cfe-4453-b40f-83c8ddd6af21">
+                        <semantic:text>"Liechtenstein"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_f8edb6b1-a1d8-4bff-b9a2-296764aa623c">
+                        <semantic:text>"Europe"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_e4921ef7-e028-4352-8b69-f876c9e32167">
+                    <semantic:inputEntry id="_f68ebb98-85a2-46af-83cb-31c0308980e9">
+                        <semantic:text>"Lithuania"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_c6c844ad-a0d5-4e9c-89d6-7191ee065c05">
+                        <semantic:text>"Europe"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_721d9e22-c07f-4f83-b9b2-0878312ba8a2">
+                    <semantic:inputEntry id="_8da50a6b-6639-45ce-b2c4-dd848f2ef113">
+                        <semantic:text>"Luxembourg"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_0e21e264-fd27-48fa-ab9c-4a8647a62a35">
+                        <semantic:text>"Europe"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_2a207d20-38d1-43ae-a00d-3cf4ca360b69">
+                    <semantic:inputEntry id="_2da4ef0d-6291-4add-8fdd-44595c82d623">
+                        <semantic:text>"Malta"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_6fec3f31-0d12-46bb-a9ee-a5ff2f5c7f66">
+                        <semantic:text>"Europe"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_6c0fafbf-9a96-4c7e-b0c3-df99fe77999e">
+                    <semantic:inputEntry id="_75ed0b6c-e769-4819-b682-d202d1b06ef8">
+                        <semantic:text>"Moldova"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_88c938ee-c75c-4ce6-b8c9-be8b62e28c9f">
+                        <semantic:text>"Europe"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_db012c71-d790-4d1b-8d5a-e02f710f2afd">
+                    <semantic:inputEntry id="_54ddc4a4-a4ec-4d62-84c6-2832e3b50cfd">
+                        <semantic:text>"Monaco"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_62f11e6c-b234-44e0-850c-8565366ae194">
+                        <semantic:text>"Europe"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_1f70976d-e216-40bf-8528-7997685681d0">
+                    <semantic:inputEntry id="_460880dd-b4be-437e-8e63-0810c22d6569">
+                        <semantic:text>"Montenegro"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_e9f9dfa2-98f5-4f28-ac44-2faf932787c5">
+                        <semantic:text>"Europe"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_5304bd01-89d7-402a-8f7b-e710d9d76cc2">
+                    <semantic:inputEntry id="_5d0f3e12-e2e1-4372-8a53-4d3681f440be">
+                        <semantic:text>"Netherlands"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_c6c23b80-cc0a-4e42-ba6d-05bd566e7c11">
+                        <semantic:text>"Europe"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_0667f8d1-05d6-45c9-a3f6-ac6969c5af28">
+                    <semantic:inputEntry id="_7c5bff12-cbfc-4c56-bc06-45633808f07f">
+                        <semantic:text>"North Macedonia"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_d9976094-5b11-49c5-959c-48713e690d9e">
+                        <semantic:text>"Europe"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_334551c4-d475-4df0-aa61-2f9552ee3b1e">
+                    <semantic:inputEntry id="_e43616bf-cd58-4f63-bd05-0464d5c5850b">
+                        <semantic:text>"Norway"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_b20a982e-feab-4dec-ae4d-aa51b1d5a50c">
+                        <semantic:text>"Europe"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_5309a4cf-81c7-4f5b-b608-ce5c028a1de8">
+                    <semantic:inputEntry id="_e2ec8c29-4fdc-47e9-af3c-8c99c2ddc11e">
+                        <semantic:text>"Poland"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_5abf32af-5053-4d23-a9d8-a87510b9358f">
+                        <semantic:text>"Europe"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_e447630f-35b3-42b3-a51c-360e836d3589">
+                    <semantic:inputEntry id="_44b1d962-eaaf-4bfa-8a14-8619f3f985b4">
+                        <semantic:text>"Portugal"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_b7afa5b2-346a-4a9f-98c9-6810a486e31b">
+                        <semantic:text>"Europe"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_2fecdfcc-def2-471e-8a95-09be6cf6dc50">
+                    <semantic:inputEntry id="_912ca87b-b193-44de-8cce-e3733bd42145">
+                        <semantic:text>"Romania"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_73b9d1bc-cbd3-4ff6-a181-b2fbecbb6757">
+                        <semantic:text>"Europe"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_8f16961e-d876-4ef4-893f-d198782dea64">
+                    <semantic:inputEntry id="_3faca623-142b-4ff0-989f-2a3880b226b9">
+                        <semantic:text>"San Marino"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_7b008866-9884-4bd4-a838-fbd0d2746da0">
+                        <semantic:text>"Europe"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_583d830e-187c-44ea-bbb5-6c56f7916045">
+                    <semantic:inputEntry id="_a3f8fdea-7971-4000-a79f-7eb18b4928ae">
+                        <semantic:text>"Serbia"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_6a958c72-483a-4d11-9a4b-59039821a87b">
+                        <semantic:text>"Europe"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_4ce7b8fb-e0cf-4ca9-97da-99a26692f1cd">
+                    <semantic:inputEntry id="_9181135c-5940-4574-8ab4-cd26f8b827d0">
+                        <semantic:text>"Slovakia"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_d60894cb-888d-4f0f-8e85-7dd3d5c175e9">
+                        <semantic:text>"Europe"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_eeaadd2c-07f9-409f-a14b-11999e8670bf">
+                    <semantic:inputEntry id="_a0538dfd-04b4-4291-b10c-fef1adec62a3">
+                        <semantic:text>"Slovenia"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_ab84db46-274a-4f2d-bfe9-ce9953e47b6a">
+                        <semantic:text>"Europe"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_5d89866b-a192-4050-bc7b-b8fc8c167389">
+                    <semantic:inputEntry id="_08166db7-8b52-418c-8a19-0c9621e3ca96">
+                        <semantic:text>"Spain"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_f96d2832-6f70-464a-9151-ccecba84e5ce">
+                        <semantic:text>"Europe"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_019d8293-a839-4b6f-9118-6c2df9ad359b">
+                    <semantic:inputEntry id="_b89f55be-89f2-4974-8fe5-01ebe8a8a02e">
+                        <semantic:text>"Sweden"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_0133afa3-90ef-4a0a-a62d-03e2e22a0fac">
+                        <semantic:text>"Europe"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_1ae65037-5dfa-49d1-a483-c4f228611f4c">
+                    <semantic:inputEntry id="_96cc46f2-8ef8-459f-9445-ac2a0a4b9f52">
+                        <semantic:text>"Ukraine"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_4eee9df4-f51e-4ac4-a979-ddc7d28ea6c4">
+                        <semantic:text>"Europe"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_6391c207-a734-4682-9d2b-c0cda782f124">
+                    <semantic:inputEntry id="_00a5e406-0de4-4875-be7e-290ea9e7055a">
+                        <semantic:text>"United Kingdom"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_343193a2-b360-442c-80a0-fbf5c5292618">
+                        <semantic:text>"Europe"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_dc7b40ff-16da-4295-a004-fe92c5d43933">
+                    <semantic:inputEntry id="_fa662916-f84f-481f-9401-dbf1426246a8">
+                        <semantic:text>"Vatican City"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_0bbe1f82-1b11-48d4-b81d-4131a54d73da">
+                        <semantic:text>"Europe"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_d44ca7bb-13d2-4ee1-8c22-aa00294330c9">
+                    <semantic:inputEntry id="_aeb1178a-7e24-4183-b47b-3916a75220b2">
+                        <semantic:text>"Algeria"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_91a54738-873f-48a4-ad75-7fa2af960f75">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_8e94cece-f1ac-4146-bd21-8a8779589370">
+                    <semantic:inputEntry id="_7b8b4c5f-1cac-4575-8cf9-3748c8d3732c">
+                        <semantic:text>"Angola"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_e17bf0ae-3f04-407d-b575-38adbd6190c9">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_2ab1d6ff-efbd-4d33-8771-c53af14ca7fc">
+                    <semantic:inputEntry id="_d78e4494-c9f7-45f6-9cbb-16da5c6e4902">
+                        <semantic:text>"Benin"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_b67cdcb8-4ca7-41d3-9c88-cdfe11a4e459">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_ffa5c406-817d-4a48-ac69-e3c878e78ef7">
+                    <semantic:inputEntry id="_b563d347-9dc3-4081-bd40-36fec1594f40">
+                        <semantic:text>"Botswana"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_d3d2ea52-def0-4d82-a4c0-71c06a0bf005">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_aff44725-96f2-4009-95bb-f315b83e711f">
+                    <semantic:inputEntry id="_5de9b309-772e-4ad0-a5b0-e4c5aae73053">
+                        <semantic:text>"Burkina Faso"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_6a8dc3d5-3d79-4d52-b7cd-2a8ddb1ea4c4">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_fa554f08-b3ad-42de-9824-3e69f503a232">
+                    <semantic:inputEntry id="_cd42380c-b4eb-41e9-9fe8-31cb64edef91">
+                        <semantic:text>"Burundi"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_e4eab0dd-79e6-41a9-aece-7a1cfd688fb8">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_9b20869a-0a9a-4cc3-96b8-0eae20eadba3">
+                    <semantic:inputEntry id="_72e92cf8-14ef-4168-a87b-27b0c2ef6d9a">
+                        <semantic:text>"Cabo Verde"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_b501568a-6486-48d7-b285-6b4b4e55a5df">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_84d6d677-c144-415f-bd6b-da51a4836090">
+                    <semantic:inputEntry id="_e630dd9a-811a-4c58-a743-0c109bce0553">
+                        <semantic:text>"Cameroon"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_dd12d2e9-1416-4e4b-b23f-c341a7d1d41b">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_236be151-718a-445d-971d-4a8183e70927">
+                    <semantic:inputEntry id="_515f8d6d-5209-4321-a51a-3197265c8e13">
+                        <semantic:text>"Central African Republic"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_ce99f7e5-e8c5-48b2-850d-7bf0a29156fd">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_fdf981c3-2fcd-4b72-8570-0d4be7539b27">
+                    <semantic:inputEntry id="_a3b8aab5-027e-494d-9e9b-a7e01e6ac9de">
+                        <semantic:text>"Chad"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_a357abdf-20f5-4e09-a31d-6b052a8a7ebd">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_7b040e13-afa3-4314-b160-a45fdd375f10">
+                    <semantic:inputEntry id="_df86b49c-9867-4740-a5c0-a92b64f36599">
+                        <semantic:text>"Comoros"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_73f069ae-b806-4129-9e5e-ef469939f435">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_2099aa5c-1798-4fe7-af8e-22c622ceaefc">
+                    <semantic:inputEntry id="_e902c9ef-130d-4319-8399-1f0641c16f17">
+                        <semantic:text>"Djibouti"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_fc2c12ed-85a6-4ca3-811c-731e49ca6df6">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_28e538b0-8cc3-4e5d-ac7b-f20f9c1d6533">
+                    <semantic:inputEntry id="_35de5a46-c898-4485-8fbc-4466ce431a59">
+                        <semantic:text>"Egypt"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_cc139883-2118-4497-954b-ca6bc12fa1fc">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_f9363220-12d5-4f4b-9917-05d5be8c6a71">
+                    <semantic:inputEntry id="_e107afca-1c6b-4a62-985f-14391c113bb6">
+                        <semantic:text>"Equatorial Guinea"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_9bc1d0f4-ef68-4782-a0cf-26f58138c80f">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_8ff420a0-9ed6-4fb1-95d4-8c531ef243de">
+                    <semantic:inputEntry id="_8fbbe1bc-72ae-48dc-8cd8-606cfb3fe00d">
+                        <semantic:text>"Eritrea"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_14398c7c-6109-4cd3-909e-58d0977c566c">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_8a4e66d0-2b12-4448-99f2-1bb4c38ecad3">
+                    <semantic:inputEntry id="_5e007d45-47f6-4945-ad14-e362c22c878d">
+                        <semantic:text>"Eswatini"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_99131f1c-e887-442a-8af5-c9f43d52b1ba">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_9cb4f4bf-58d5-4c1c-b106-0d2f4b58fca2">
+                    <semantic:inputEntry id="_dbeae1a3-3ad8-421d-a2bc-2ee60f1bcc3a">
+                        <semantic:text>"Ethiopia"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_286144a7-aec9-4d04-b8b7-63caf3248e77">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_5fb28ff5-da1e-4c8e-8c95-73a99a837b91">
+                    <semantic:inputEntry id="_33388d93-f4ec-40fc-a56f-7e9e97935868">
+                        <semantic:text>"Gabon"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_abc04f55-330a-422f-831e-dba08ea71169">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_d15b9cd2-26cc-4010-83d9-9964ec2a40c9">
+                    <semantic:inputEntry id="_33299a1a-068e-4dbc-97d5-f5b7823b9c0b">
+                        <semantic:text>"Gambia"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_0b2a3275-1adf-404e-b7ec-ac55f8ecd745">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_d5c3acea-0ec2-4ef7-9134-7a4d0ddd22f5">
+                    <semantic:inputEntry id="_9bbbbeb3-443e-4782-91c1-b6e4d10e7258">
+                        <semantic:text>"Ghana"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_2b85aa49-0aa6-4a41-9c6c-fde184097e5c">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_50222462-da98-43e7-a048-f6ce1d3bc3be">
+                    <semantic:inputEntry id="_4e2cbf42-7b9c-463d-a6ba-1c529c6edddc">
+                        <semantic:text>"Guinea"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_0fcc1736-77b8-47d7-b98d-a2c30c44f575">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_1e32688a-dc4e-4c71-9734-2e4ea5fb5281">
+                    <semantic:inputEntry id="_86b6746c-8539-4739-8a1b-bdaad86fcabe">
+                        <semantic:text>"Guinea-Bissau"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_ac7e6075-bd80-4485-a7ce-a4c6c1b395fb">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_4d2a9771-35cf-4748-8457-ef0ed00be255">
+                    <semantic:inputEntry id="_726d96bb-b4b9-4ac5-9093-d161b5b8ae9b">
+                        <semantic:text>"Ivory Coast (Côte d'Ivoire)"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_4fe1779f-8590-42fb-929c-ead6f6971d19">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_0adf5640-22f4-4633-8a0b-2798c967f9a7">
+                    <semantic:inputEntry id="_b8be8b82-664c-428d-adef-e9185a6d0eda">
+                        <semantic:text>"Kenya"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_9261da30-64f2-4837-9cc3-b6313510f7e6">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_909bd309-359b-4ae4-8b1c-411b1ff1ec77">
+                    <semantic:inputEntry id="_1e9f6ff9-4ebc-47f4-b8ef-d932d32d6fcb">
+                        <semantic:text>"Lesotho"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_fe8c09b7-e960-4589-8375-f6c9f0ae4d11">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_a9804c17-8559-49b8-82d5-e6a3528805b5">
+                    <semantic:inputEntry id="_1906f611-75e7-4f5c-beaa-eab6668aab75">
+                        <semantic:text>"Libya"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_0866e7c6-8976-4383-a5ea-99b6b9a79f9f">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_9a4f0ddd-0975-4f9e-9af1-52f5edba1580">
+                    <semantic:inputEntry id="_af5780ab-02ee-43db-9349-1eafb893666b">
+                        <semantic:text>"Madagascar"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_b07ba1e6-84f0-4709-9cf8-1966f16f2cf2">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_59321fd2-61e1-4eb7-867c-a3f1ca6540bc">
+                    <semantic:inputEntry id="_731c6d85-1737-4d2b-a0f7-0669bb185c16">
+                        <semantic:text>"Malawi"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_4bfef892-e582-46e1-9430-4b5891668aa6">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_171a5b8a-5eb9-4cbc-80e4-2a21d6e708c1">
+                    <semantic:inputEntry id="_2a8651e9-03b9-42c6-8c3b-c92d16f3c017">
+                        <semantic:text>"Mali"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_1d3a7349-7cc2-4c9a-b57f-2748194c900e">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_92e31d69-9bf5-4fe3-958e-778a4bfe41fd">
+                    <semantic:inputEntry id="_0b5df612-a76b-432c-9807-3964777a91b1">
+                        <semantic:text>"Mauritania"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_49682276-7e8a-49e6-ba7e-2ebd0d19951f">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_dffefba5-3584-45d8-8456-a30add408bf4">
+                    <semantic:inputEntry id="_84920f07-c1b5-4d9d-9a89-9d8e86eb2a48">
+                        <semantic:text>"Morocco"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_d5170409-89aa-4bae-ae23-8f343cfaf45e">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_542b5f89-2175-4dfa-8b8d-1e88e458e677">
+                    <semantic:inputEntry id="_a2e0f521-a987-4df6-87c9-a30cf8681a9e">
+                        <semantic:text>"Namibia"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_5fd772c6-ada3-4a7e-a6d9-01280a86f6eb">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_2a76cdc1-e782-439a-8959-092aecf8c2e3">
+                    <semantic:inputEntry id="_2efca4f8-b169-4098-9d34-705533dd9f62">
+                        <semantic:text>"Niger"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_be0503bb-58df-4724-873d-4e63bbad139a">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_e3544a33-7f35-4540-a9c4-c6ff05766c41">
+                    <semantic:inputEntry id="_ff7798bb-1589-44a4-bcd2-97452e6cec10">
+                        <semantic:text>"Nigeria"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_2f5d3017-41d9-4105-930a-2dfe042d7ac6">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_1fb2ba96-7806-4d4a-9e9a-3e449b7c729d">
+                    <semantic:inputEntry id="_0ca22a8e-c630-4d9a-a41c-f92d8028c261">
+                        <semantic:text>"Republic of the Congo"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_cbdf7a04-b1c5-4fe8-bc52-f5e601376e84">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_5861e7e1-392a-49b6-af19-36da96b7410e">
+                    <semantic:inputEntry id="_17d521e7-86bf-45c3-8ca8-49efd2b4fb7f">
+                        <semantic:text>"Rwanda"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_4d4f5042-9c41-4669-887c-5e5bedd42971">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_d7f7a0a2-946a-44f5-8a0c-e81afa6eff8f">
+                    <semantic:inputEntry id="_07eba3d8-7372-480d-8f03-0db6a9d25042">
+                        <semantic:text>"Sao Tome and Principe"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_3ac6bf48-3f89-479e-845b-c2377f38a4ef">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_65282104-bebf-4b83-a1ed-5d47b068121c">
+                    <semantic:inputEntry id="_a108f3aa-a79d-432b-bac8-9d417c83d101">
+                        <semantic:text>"Senegal"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_8fe783c1-d71d-4ff8-ae45-d4f2e0e8059d">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_fab5dd4f-336b-4d76-bb2d-03454fd9ad9d">
+                    <semantic:inputEntry id="_5545886d-747e-4d0b-a881-0d44f7c9a514">
+                        <semantic:text>"Seychelles"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_84553f58-e1d7-4723-a54e-068c493faa30">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_e04e11c9-5007-478e-832e-9677a47ffc1b">
+                    <semantic:inputEntry id="_997edcab-70bb-493e-8347-2e440c4ec545">
+                        <semantic:text>"Tanzania"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_cf42f0ff-cb12-476a-ac45-eed7ba68bd9a">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_6631362d-845b-4292-9b63-006d18eb4890">
+                    <semantic:inputEntry id="_15a4b392-c85a-44f7-aba9-1a283459bf29">
+                        <semantic:text>"Togo"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_92aaa2a4-6897-4452-88e7-43c96d238dca">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_e37e5120-e60b-484f-acd1-7abc51446a8b">
+                    <semantic:inputEntry id="_4d0486e0-39a8-4eb8-98b2-ca7cc04e9515">
+                        <semantic:text>"Tunisia"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_e048bd3b-6f9e-42fc-bbeb-0c4938ed6b9d">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_744d9f78-81ee-4ba1-883b-06e00f80d028">
+                    <semantic:inputEntry id="_d5617499-068f-4330-b4d9-3c64bbe07d82">
+                        <semantic:text>"Uganda"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_1f71c95f-ef7f-41b5-8308-523bb7f9e856">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_7700efee-0204-4493-93b8-94e1d6a6ea43">
+                    <semantic:inputEntry id="_b01dbfbb-f330-4923-9dd8-0f765d641ab3">
+                        <semantic:text>"Zambia"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_2c34e87e-2407-4779-b865-09f16d79a0d5">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_1ff3fde4-3ee2-437b-a690-fc0f19eeab28">
+                    <semantic:inputEntry id="_702203fa-653d-4ef5-91bb-097351397b3f">
+                        <semantic:text>"Zimbabwe"</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_4d5757c0-f1fe-4c35-bf52-bd04d6d8ba0c">
+                        <semantic:text>"Africa"</semantic:text>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_dd08a643-f318-4ce8-8c31-f86d7643b5bd">
+                    <semantic:inputEntry id="_df016edc-0dfb-4c0b-a632-c0f7d271cef7" triso:empty="true">
+                        <semantic:text>-</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_88accfd9-e697-4f3e-ba51-cb641ad3982a">
+                        <semantic:text/>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_5a3b97da-cac2-488f-8e8a-fa3390f070ce">
+                    <semantic:inputEntry id="_1b100758-bd4a-40fd-9ea3-4663fd48550b" triso:empty="true">
+                        <semantic:text>-</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_f77412eb-7ba4-4a2c-9740-804cebebc577">
+                        <semantic:text/>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_5fc17268-ebfc-4f9b-afda-0c710900a6db">
+                    <semantic:inputEntry id="_d89cb781-0ee5-48c9-91f3-d653073ffda8" triso:empty="true">
+                        <semantic:text>-</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_917af35b-4f90-4548-9d7f-b499c5f322f8">
+                        <semantic:text/>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_e08e83b3-0e12-419a-b1b8-93101c5f8026">
+                    <semantic:inputEntry id="_6d3d733c-4677-4b8e-8605-82d66dbd7c6a" triso:empty="true">
+                        <semantic:text>-</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_51eb40a1-9841-4339-b6c9-8037b670fc00">
+                        <semantic:text/>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_63c5a30c-f0bf-48bf-b65c-425f4fe10620">
+                    <semantic:inputEntry id="_f1b0fbbc-0a78-4c79-930b-ea7776b50bc2" triso:empty="true">
+                        <semantic:text>-</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_ff617b98-cc37-4553-950c-ff45d53e651b">
+                        <semantic:text/>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+                <semantic:rule id="_b3996290-a4ab-46e4-8864-9c2820395396">
+                    <semantic:inputEntry id="_3ad83d8c-cd98-4d25-808e-9fe6106e8364" triso:empty="true">
+                        <semantic:text>-</semantic:text>
+                    </semantic:inputEntry>
+                    <semantic:outputEntry id="_007bb06f-3f02-4d07-b89a-c55a53829dc8">
+                        <semantic:text/>
+                    </semantic:outputEntry>
+                    <semantic:annotationEntry>
+                        <semantic:text/>
+                    </semantic:annotationEntry>
+                </semantic:rule>
+            </semantic:decisionTable>
+        </semantic:encapsulatedLogic>
+    </semantic:businessKnowledgeModel>
+    <semantic:decision id="_64f21730-f8e3-4d9d-8abe-0306cadcebbb" name="Merchant_Risk" triso:readOnly="false">
+        <semantic:variable name="Merchant_Risk" id="_bc822b42-060e-4d5d-8d7e-73bea4c47d1c" typeRef="number"/>
+        <semantic:informationRequirement id="_dbc5bedc-580f-47aa-a44e-b96f4a61ef03" triso:readOnly="false">
+            <semantic:requiredInput href="#_c1952761-f378-4f7c-ac74-5346b2de790b"/>
+        </semantic:informationRequirement>
+        <semantic:knowledgeRequirement id="_866bbab8-170e-4a8e-b8b0-bd4411607b3a" triso:readOnly="false">
+            <semantic:requiredKnowledge href="#_31da1856-7b3f-49d9-859e-237b6b9f72aa"/>
+        </semantic:knowledgeRequirement>
+        <semantic:decisionTable triso:descriptionVisible="false" id="_3462e9b2-c49c-4822-8bfd-321872af9781" hitPolicy="UNIQUE" outputLabel="Merchant_Risk" typeRef="number" triso:expressionId="_d87a9951-5fbe-4cbc-9cc4-6be6484b79d3">
+            <semantic:input id="_5afb03fe-d592-490c-bd58-f29035a8a85a" triso:allowNull="true" label="Country_Continent(Country_Merchant)">
+                <semantic:inputExpression typeRef="Continent_Special">
+                    <semantic:text>Country_Continent(Country_Merchant)</semantic:text>
+                </semantic:inputExpression>
+                <semantic:inputValues triso:constraintsType="enumeration">
+                    <semantic:text>"Europe","Africa","Other",null</semantic:text>
+                </semantic:inputValues>
+            </semantic:input>
+            <semantic:input id="_7bfcb60e-0c02-4baf-bb32-b755891f19aa" triso:allowNull="true" label="Country_Merchant">
+                <semantic:inputExpression typeRef="Country">
+                    <semantic:text>Country_Merchant</semantic:text>
+                </semantic:inputExpression>
+                <semantic:inputValues triso:constraintsType="enumeration">
+                    <semantic:text>"Albania","Andorra","Austria","Belarus","Belgium","Bosnia and Herzegovina","Bulgaria","Croatia","Cyprus","Czech Republic","Denmark","Estonia","Finland","France","Germany","Greece","Hungary","Iceland","Ireland","Italy","Kosovo","Latvia","Liechtenstein","Lithuania","Luxembourg","Malta","Moldova","Monaco","Montenegro","Netherlands","North Macedonia","Norway","Poland","Portugal","Romania","San Marino","Serbia","Slovakia","Slovenia","Spain","Sweden","Switzerland","Ukraine","United Kingdom","Vatican City","Algeria","Angola","Benin","Botswana","Burkina Faso","Burundi","Cabo Verde","Cameroon","Central African Republic","Chad","Comoros","Democratic Republic of the Congo","Djibouti","Egypt","Equatorial Guinea","Eritrea","Eswatini","Ethiopia","Gabon","Gambia","Ghana","Guinea","Guinea-Bissau","Ivory Coast (Côte d'Ivoire)","Kenya","Lesotho","Liberia","Libya","Madagascar","Malawi","Mali","Mauritania","Mauritius","Morocco","Mozambique","Namibia","Niger","Nigeria","Republic of the Congo","Rwanda","Sao Tome and Principe","Senegal","Seychelles","Sierra Leone","Somalia","South Africa","South Sudan","Sudan","Tanzania","Togo","Tunisia","Uganda","Zambia","Zimbabwe",null</semantic:text>
+                </semantic:inputValues>
+            </semantic:input>
+            <semantic:output id="_3295755e-3c1f-4443-aed3-c48e8ac6fdcf" triso:allowNull="true" typeRef="number"/>
+            <semantic:annotation name="Description"/>
+            <semantic:rule id="_4d96d4e8-0851-49b2-8e64-11086f62a0a8">
+                <semantic:inputEntry id="_466e3e19-1b23-4d33-9aaf-784bda4f9a0a">
+                    <semantic:text>"Europe"</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_88655d5c-e12e-42c8-9bbb-f23eb826e191">
+                    <semantic:text>"Italy"</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_6ae5f245-ad76-4017-bfa1-40d3c93a9b59">
+                    <semantic:text>10</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_e72488db-a469-46fc-b26a-b16c4e89ec46">
+                <semantic:inputEntry id="_e1f5aac4-7a4e-46ea-a6b1-862df353ce78">
+                    <semantic:text>"Europe"</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_14e24afd-6eae-4255-a7c8-3da0dbb89d58">
+                    <semantic:text>not("Italy")</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_edac0a8b-81a4-46e8-addc-bd7363242e7a">
+                    <semantic:text>20</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_7480aed3-e0aa-4ea3-a00f-0cb68cda6de1">
+                <semantic:inputEntry id="_54946979-d406-40ba-92b1-ffae04e78960">
+                    <semantic:text>"Africa"</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_1b24d898-db24-4c7a-b072-1659cd41f840" triso:empty="true">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_c8ce7b79-8b64-4b01-96c7-8ed442b5467a">
+                    <semantic:text>60</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_eabfda02-e979-42e2-8ab0-2dc8e781cec3">
+                <semantic:inputEntry id="_d0eee77b-f625-4aa6-9013-f2a03f46df38">
+                    <semantic:text>"Other"</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_4fdd071b-584e-41e6-b057-971b9e10a3cd" triso:empty="true">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_b2e1b1dc-d458-4c16-ad80-32d73c2bdb16">
+                    <semantic:text>0</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+        </semantic:decisionTable>
+    </semantic:decision>
+    <semantic:inputData id="_d8aa6b0b-8f33-40cc-91e3-ddb647125a9b" name="Country_Carholder" triso:readOnly="false">
+        <semantic:variable name="Country_Carholder" id="_6db7dd40-8790-49d3-a51a-a9612a23d3ce" typeRef="Country"/>
+    </semantic:inputData>
+    <semantic:decision id="_7188453d-9ea5-40b9-9acf-c8403c0e8110" name="Carholder_Risk" triso:readOnly="false">
+        <semantic:variable name="Carholder_Risk" id="_ebb42bd1-54f8-4fd6-9f6f-0bfef5cf32c2" typeRef="number"/>
+        <semantic:informationRequirement id="_2d89efa7-c145-4d82-929a-4e90c1d2c32f" triso:readOnly="false">
+            <semantic:requiredInput href="#_d8aa6b0b-8f33-40cc-91e3-ddb647125a9b"/>
+        </semantic:informationRequirement>
+        <semantic:knowledgeRequirement id="_798b5cf8-2e96-415f-a87c-268c8127fcfd" triso:readOnly="false">
+            <semantic:requiredKnowledge href="#_31da1856-7b3f-49d9-859e-237b6b9f72aa"/>
+        </semantic:knowledgeRequirement>
+        <semantic:decisionTable triso:descriptionVisible="false" id="_71eaabc0-4310-47a6-89cc-cc40ab6a77a4" hitPolicy="UNIQUE" outputLabel="Carholder_Risk" typeRef="number" triso:expressionId="_0429551b-d098-4a3b-bd53-f9de4f9f21b9">
+            <semantic:input id="_ab9bb3f5-c73b-4cc0-859d-6a350a8f6177" triso:allowNull="true" label="Country_Continent(Country_Carholder)">
+                <semantic:inputExpression typeRef="Continent_Special">
+                    <semantic:text>Country_Continent(Country_Carholder)</semantic:text>
+                </semantic:inputExpression>
+                <semantic:inputValues triso:constraintsType="enumeration">
+                    <semantic:text>"Europe","Africa","Other",null</semantic:text>
+                </semantic:inputValues>
+            </semantic:input>
+            <semantic:input id="_53190cc9-eb22-4570-97bf-08c7044f6eb9" triso:allowNull="true" label="Country_Carholder">
+                <semantic:inputExpression typeRef="Country">
+                    <semantic:text>Country_Carholder</semantic:text>
+                </semantic:inputExpression>
+                <semantic:inputValues triso:constraintsType="enumeration">
+                    <semantic:text>"Albania","Andorra","Austria","Belarus","Belgium","Bosnia and Herzegovina","Bulgaria","Croatia","Cyprus","Czech Republic","Denmark","Estonia","Finland","France","Germany","Greece","Hungary","Iceland","Ireland","Italy","Kosovo","Latvia","Liechtenstein","Lithuania","Luxembourg","Malta","Moldova","Monaco","Montenegro","Netherlands","North Macedonia","Norway","Poland","Portugal","Romania","San Marino","Serbia","Slovakia","Slovenia","Spain","Sweden","Switzerland","Ukraine","United Kingdom","Vatican City","Algeria","Angola","Benin","Botswana","Burkina Faso","Burundi","Cabo Verde","Cameroon","Central African Republic","Chad","Comoros","Democratic Republic of the Congo","Djibouti","Egypt","Equatorial Guinea","Eritrea","Eswatini","Ethiopia","Gabon","Gambia","Ghana","Guinea","Guinea-Bissau","Ivory Coast (Côte d'Ivoire)","Kenya","Lesotho","Liberia","Libya","Madagascar","Malawi","Mali","Mauritania","Mauritius","Morocco","Mozambique","Namibia","Niger","Nigeria","Republic of the Congo","Rwanda","Sao Tome and Principe","Senegal","Seychelles","Sierra Leone","Somalia","South Africa","South Sudan","Sudan","Tanzania","Togo","Tunisia","Uganda","Zambia","Zimbabwe",null</semantic:text>
+                </semantic:inputValues>
+            </semantic:input>
+            <semantic:output id="_35dc29ec-0bd1-4f60-8345-70eb277d2636" triso:allowNull="true" typeRef="number"/>
+            <semantic:annotation name="Description"/>
+            <semantic:rule id="_1019e48b-7915-415d-804b-ccaaaba83283">
+                <semantic:inputEntry id="_ecbc3399-8b21-47ae-9762-4c828a307249">
+                    <semantic:text>"Europe"</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_f7a73d5f-7efe-4fb3-be0b-f1b60c72edcc">
+                    <semantic:text>"Italy"</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_a30f8300-9436-4591-9c40-78dd2861a27d">
+                    <semantic:text>0</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_93d5293c-073d-4ba3-b102-1f53a01d7d9f">
+                <semantic:inputEntry id="_d5ade3e9-16ab-4d5b-a2ef-30da8260f133">
+                    <semantic:text>"Europe"</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_08d35594-ba50-47d3-95fe-99f539bc6288">
+                    <semantic:text>not("Italy")</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_f23e8abb-5201-4d86-a2b9-fb39bf015cf9">
+                    <semantic:text>10</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_59339c43-57cd-450e-b764-e08b674cb649">
+                <semantic:inputEntry id="_14e55ce9-91fd-4a76-88cf-554cf241817e">
+                    <semantic:text>"Africa"</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_c37be715-5b10-4f41-a930-b4be34021ac1" triso:empty="true">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_602d6830-e8c6-47fc-b4e8-d4fa8a0914ad">
+                    <semantic:text>20</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_70a455d8-069e-4fbf-a702-8afd4490d5a9">
+                <semantic:inputEntry id="_51fd48a4-66b3-4324-b997-963bd9ad2c41">
+                    <semantic:text>"Other"</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_56189b85-72d4-42f5-8497-b55563a12f38" triso:empty="true">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_1437987a-8b51-43cb-9780-d33c5eae833d">
+                    <semantic:text>0</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+        </semantic:decisionTable>
+    </semantic:decision>
+    <semantic:decision id="_4079a632-841b-446e-93e6-b90bc5c8e846" name="Special_Risk" triso:readOnly="false">
+        <semantic:variable name="Special_Risk" id="_0393826e-3818-4465-8c9e-83e1e37a85b0" typeRef="number"/>
+        <semantic:informationRequirement id="_3529904a-bf24-4a00-bc87-9c76ffe548c8" triso:readOnly="false">
+            <semantic:requiredInput href="#_c1952761-f378-4f7c-ac74-5346b2de790b"/>
+        </semantic:informationRequirement>
+        <semantic:informationRequirement id="_be6964bd-bd1f-4d79-bcb4-5f638c4782fc" triso:readOnly="false">
+            <semantic:requiredInput href="#_d8aa6b0b-8f33-40cc-91e3-ddb647125a9b"/>
+        </semantic:informationRequirement>
+        <semantic:decisionTable triso:descriptionVisible="false" id="_ac488acd-c4b9-4aa1-ba04-70547cbefaea" hitPolicy="FIRST" outputLabel="Special_Risk" typeRef="number" triso:expressionId="_9cdac0bf-ca7d-4f55-b05b-0316d1f8bc3c">
+            <semantic:input id="_0d9c12f7-f575-40b9-b1d2-1d6378721fb1" label="Country_Merchant">
+                <semantic:inputExpression typeRef="Country">
+                    <semantic:text>Country_Merchant</semantic:text>
+                </semantic:inputExpression>
+                <semantic:inputValues triso:constraintsType="enumeration">
+                    <semantic:text>"Albania","Andorra","Austria","Belarus","Belgium","Bosnia and Herzegovina","Bulgaria","Croatia","Cyprus","Czech Republic","Denmark","Estonia","Finland","France","Germany","Greece","Hungary","Iceland","Ireland","Italy","Kosovo","Latvia","Liechtenstein","Lithuania","Luxembourg","Malta","Moldova","Monaco","Montenegro","Netherlands","North Macedonia","Norway","Poland","Portugal","Romania","San Marino","Serbia","Slovakia","Slovenia","Spain","Sweden","Switzerland","Ukraine","United Kingdom","Vatican City","Algeria","Angola","Benin","Botswana","Burkina Faso","Burundi","Cabo Verde","Cameroon","Central African Republic","Chad","Comoros","Democratic Republic of the Congo","Djibouti","Egypt","Equatorial Guinea","Eritrea","Eswatini","Ethiopia","Gabon","Gambia","Ghana","Guinea","Guinea-Bissau","Ivory Coast (Côte d'Ivoire)","Kenya","Lesotho","Liberia","Libya","Madagascar","Malawi","Mali","Mauritania","Mauritius","Morocco","Mozambique","Namibia","Niger","Nigeria","Republic of the Congo","Rwanda","Sao Tome and Principe","Senegal","Seychelles","Sierra Leone","Somalia","South Africa","South Sudan","Sudan","Tanzania","Togo","Tunisia","Uganda","Zambia","Zimbabwe"</semantic:text>
+                </semantic:inputValues>
+            </semantic:input>
+            <semantic:input id="_4237dfc3-ab8a-41ab-adc1-e51b30f7aaa1" label="Country_Carholder">
+                <semantic:inputExpression typeRef="Country">
+                    <semantic:text>Country_Carholder</semantic:text>
+                </semantic:inputExpression>
+                <semantic:inputValues triso:constraintsType="enumeration">
+                    <semantic:text>"Albania","Andorra","Austria","Belarus","Belgium","Bosnia and Herzegovina","Bulgaria","Croatia","Cyprus","Czech Republic","Denmark","Estonia","Finland","France","Germany","Greece","Hungary","Iceland","Ireland","Italy","Kosovo","Latvia","Liechtenstein","Lithuania","Luxembourg","Malta","Moldova","Monaco","Montenegro","Netherlands","North Macedonia","Norway","Poland","Portugal","Romania","San Marino","Serbia","Slovakia","Slovenia","Spain","Sweden","Switzerland","Ukraine","United Kingdom","Vatican City","Algeria","Angola","Benin","Botswana","Burkina Faso","Burundi","Cabo Verde","Cameroon","Central African Republic","Chad","Comoros","Democratic Republic of the Congo","Djibouti","Egypt","Equatorial Guinea","Eritrea","Eswatini","Ethiopia","Gabon","Gambia","Ghana","Guinea","Guinea-Bissau","Ivory Coast (Côte d'Ivoire)","Kenya","Lesotho","Liberia","Libya","Madagascar","Malawi","Mali","Mauritania","Mauritius","Morocco","Mozambique","Namibia","Niger","Nigeria","Republic of the Congo","Rwanda","Sao Tome and Principe","Senegal","Seychelles","Sierra Leone","Somalia","South Africa","South Sudan","Sudan","Tanzania","Togo","Tunisia","Uganda","Zambia","Zimbabwe"</semantic:text>
+                </semantic:inputValues>
+            </semantic:input>
+            <semantic:output id="_c8245307-02ce-468e-8347-1aa6c62cc0fc" triso:allowNull="true" typeRef="number"/>
+            <semantic:annotation name="Description"/>
+            <semantic:rule id="_a4ee7455-2699-4f8b-869d-fdf339448f5a">
+                <semantic:inputEntry id="_7ddcb299-a66c-42e3-9eee-73fe36dcaa8c">
+                    <semantic:text>"South Africa"</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_492fe083-00f7-412f-b7a0-b271276a1a78">
+                    <semantic:text>"Switzerland"</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_64cd81e8-fd03-45f9-aaa8-14cf663012ff">
+                    <semantic:text>30</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_fc51a980-b432-428b-bd68-d243065b2f24">
+                <semantic:inputEntry id="_fd7053b7-61b0-4ed0-89c6-369d7fc0417f" triso:empty="true">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:inputEntry id="_8fa0ee63-fe47-4a87-8b4a-7e594a1b5ae2" triso:empty="true">
+                    <semantic:text>-</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_8c1529a2-5a49-460a-a8ca-b096fb3d9656">
+                    <semantic:text>0</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+        </semantic:decisionTable>
+    </semantic:decision>
+    <semantic:decision id="_07881d80-1cd2-48bb-bc18-44530556ff47" name="Total_Risk" triso:readOnly="false">
+        <semantic:variable name="Total_Risk" id="_7126222c-9e0d-4d11-9beb-a86d97f95849" typeRef="number"/>
+        <semantic:informationRequirement id="_ed14e62e-4bfa-4ca5-9499-e77d62160d90" triso:readOnly="false">
+            <semantic:requiredDecision href="#_daa8a04c-91e6-4a73-9d71-aaa51eb4a62c"/>
+        </semantic:informationRequirement>
+        <semantic:informationRequirement id="_03e26c2d-60fc-436d-b810-94b3ca463c08" triso:readOnly="false">
+            <semantic:requiredDecision href="#_64f21730-f8e3-4d9d-8abe-0306cadcebbb"/>
+        </semantic:informationRequirement>
+        <semantic:informationRequirement id="_6ac17403-6b9a-42a1-b29d-2af9f200e2c9" triso:readOnly="false">
+            <semantic:requiredDecision href="#_7188453d-9ea5-40b9-9acf-c8403c0e8110"/>
+        </semantic:informationRequirement>
+        <semantic:informationRequirement id="_552891bf-f70d-4464-8f49-856be4542a40" triso:readOnly="false">
+            <semantic:requiredDecision href="#_4079a632-841b-446e-93e6-b90bc5c8e846"/>
+        </semantic:informationRequirement>
+        <semantic:literalExpression id="_3340a0c6-1a0b-4b66-9248-33a7ac533cc0" triso:descriptionVisible="false" typeRef="number" triso:expressionId="_d1df3f4f-ca4b-4425-8b47-bfcaf5260b4d">
+            <semantic:text>Amount_Risk+Merchant_Risk+Carholder_Risk+Special_Risk</semantic:text>
+        </semantic:literalExpression>
+    </semantic:decision>
+    <semantic:decision id="_f6cfcb53-84cd-4cd2-a324-c881073e5092" name="Result" triso:readOnly="false">
+        <semantic:variable name="Result" id="_975ba76c-b7e2-49f1-a60f-93f198b33c3a" typeRef="Any"/>
+        <semantic:informationRequirement id="_ad957e30-f3d3-41e0-be4d-75f722801004" triso:readOnly="false">
+            <semantic:requiredDecision href="#_07881d80-1cd2-48bb-bc18-44530556ff47"/>
+        </semantic:informationRequirement>
+        <semantic:decisionTable triso:descriptionVisible="false" id="_0ebe602a-ccc9-4c90-9ef8-896d2d0681a6" hitPolicy="UNIQUE" outputLabel="Result" typeRef="Any" triso:expressionId="_049453a6-c16f-4575-a3a8-0135fb6ed840">
+            <semantic:input id="_84aec05b-b535-4f29-b6c7-4ef508d36876" label="Total_Risk">
+                <semantic:inputExpression typeRef="number">
+                    <semantic:text>Total_Risk</semantic:text>
+                </semantic:inputExpression>
+            </semantic:input>
+            <semantic:output id="_4564e1fb-b716-44fd-a8d7-0d9e5dedc628" triso:allowNull="true" typeRef="Any"/>
+            <semantic:annotation name="Description"/>
+            <semantic:rule id="_0eca7c54-fa2b-443c-a0b6-5859542a6697">
+                <semantic:inputEntry id="_93cea1ac-d29e-4cec-95cb-54e7e71db588">
+                    <semantic:text>&lt;=100</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_88c8bbf5-65bb-482a-b489-514ae9bc5c39">
+                    <semantic:text>"Accepted"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_2c249c87-cf76-410c-b4f9-e1fec8ac213e">
+                <semantic:inputEntry id="_a16f1d78-e232-46bb-b8ff-1d5c944e34e0">
+                    <semantic:text>(100..150]</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_7ed909c3-483d-44ad-a8ea-69b3b0579a62">
+                    <semantic:text>"Blocked"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+            <semantic:rule id="_4fd57020-0f7f-4832-980d-62a209104ede">
+                <semantic:inputEntry id="_d7812823-2783-4012-9142-44084e263d4a">
+                    <semantic:text>&gt;150</semantic:text>
+                </semantic:inputEntry>
+                <semantic:outputEntry id="_f9695f92-72a7-4c7a-b29f-fa1852232420">
+                    <semantic:text>"Rejected"</semantic:text>
+                </semantic:outputEntry>
+                <semantic:annotationEntry>
+                    <semantic:text/>
+                </semantic:annotationEntry>
+            </semantic:rule>
+        </semantic:decisionTable>
+    </semantic:decision>
+    <dmndi:DMNDI>
+        <dmndi:DMNDiagram id="_464d08fa-2223-4e88-815e-60be6624c3af" triso:modelElementRef="_20175a6b-5f93-48ee-b90b-31c40efbe887" name="Page 1">
+            <di:extension/>
+            <dmndi:Size height="1050" width="1605"/>
+            <dmndi:DMNShape id="_0d3a5394-4dd3-4155-ac89-753de56e3115" dmnElementRef="_badd2cfe-2f42-4ce3-8142-4c1a40548a38">
+                <dc:Bounds x="254.59160770520137" y="111.97172707900917" width="135.4823417663574" height="60.00000762939452"/>
+                <dmndi:DMNLabel sharedStyle="LS_479427d2-a85d-4dca-b8e2-40dd73cdd213_0" trisodmn:defaultBounds="true"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape id="_a1b51a4e-e814-40da-86ba-a7eefc247b5f" dmnElementRef="_daa8a04c-91e6-4a73-9d71-aaa51eb4a62c">
+                <dc:Bounds x="730.832771361317" y="111.9717292456382" width="153" height="59.999999999999986"/>
+                <dmndi:DMNLabel sharedStyle="LS_479427d2-a85d-4dca-b8e2-40dd73cdd213_0" trisodmn:defaultBounds="true"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape id="_a07365de-d807-4d30-ad7c-358554236087" dmnElementRef="_c1952761-f378-4f7c-ac74-5346b2de790b">
+                <dc:Bounds x="254.59160770520134" y="260.971720990395" width="135.48234176635742" height="60.00000762939453"/>
+                <dmndi:DMNLabel sharedStyle="LS_479427d2-a85d-4dca-b8e2-40dd73cdd213_0" trisodmn:defaultBounds="true"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape id="_d291b6e6-03d4-48c3-bb46-02616bc5fe73" dmnElementRef="_31da1856-7b3f-49d9-859e-237b6b9f72aa">
+                <dc:Bounds x="55.484337435423704" y="369.97174320145575" width="153.00000000000003" height="60.00000000000006"/>
+                <dmndi:DMNLabel sharedStyle="LS_479427d2-a85d-4dca-b8e2-40dd73cdd213_0" trisodmn:defaultBounds="true"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape id="_e1941ca0-c113-4569-94e5-1fb1287696e4" dmnElementRef="_64f21730-f8e3-4d9d-8abe-0306cadcebbb">
+                <dc:Bounds x="730.832771361317" y="260.97172480509226" width="153" height="60"/>
+                <dmndi:DMNLabel sharedStyle="LS_479427d2-a85d-4dca-b8e2-40dd73cdd213_0" trisodmn:defaultBounds="true"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape id="_d5bf315b-2691-4cc3-91f1-4bdfee15606a" dmnElementRef="_d8aa6b0b-8f33-40cc-91e3-ddb647125a9b">
+                <dc:Bounds x="254.59160690562263" y="497.97172895655547" width="135.4823417663574" height="60.00000762939453"/>
+                <dmndi:DMNLabel sharedStyle="LS_479427d2-a85d-4dca-b8e2-40dd73cdd213_0" trisodmn:defaultBounds="true"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape id="_23147834-cfc3-41b7-a121-2a471edcb6d9" dmnElementRef="_7188453d-9ea5-40b9-9acf-c8403c0e8110">
+                <dc:Bounds x="730.8327525749353" y="497.9717253508958" width="153" height="60"/>
+                <dmndi:DMNLabel sharedStyle="LS_479427d2-a85d-4dca-b8e2-40dd73cdd213_0" trisodmn:defaultBounds="true"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape id="_00e548d2-7937-4b50-ab8a-3bbee051bb6e" dmnElementRef="_4079a632-841b-446e-93e6-b90bc5c8e846">
+                <dc:Bounds x="730.832763465192" y="369.97173467860136" width="153" height="60"/>
+                <dmndi:DMNLabel sharedStyle="LS_479427d2-a85d-4dca-b8e2-40dd73cdd213_0" trisodmn:defaultBounds="true"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape id="_4876af85-e71a-4dbb-9ff3-611da24e64e6" dmnElementRef="_07881d80-1cd2-48bb-bc18-44530556ff47">
+                <dc:Bounds x="1013.8327671442885" y="314.9717354981652" width="153" height="60"/>
+                <dmndi:DMNLabel sharedStyle="LS_479427d2-a85d-4dca-b8e2-40dd73cdd213_0" trisodmn:defaultBounds="true"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNShape id="_eb27bb83-cff5-468d-a468-b61a6662a29e" dmnElementRef="_f6cfcb53-84cd-4cd2-a324-c881073e5092">
+                <dc:Bounds x="1234.4327699606079" y="314.9717354981652" width="153" height="60"/>
+                <dmndi:DMNLabel sharedStyle="LS_479427d2-a85d-4dca-b8e2-40dd73cdd213_0" trisodmn:defaultBounds="true"/>
+            </dmndi:DMNShape>
+            <dmndi:DMNEdge id="_69f72ffc-2abe-49a9-b91b-b5c7dd2fc718" dmnElementRef="_b5c96c79-ac5a-4df6-b325-7f77cea83a4d">
+                <di:waypoint x="390.07394947155876" y="141.97172707900916"/>
+                <di:waypoint x="730.832771361317" y="141.9717292456382"/>
+                <dmndi:DMNLabel sharedStyle="LS_479427d2-a85d-4dca-b8e2-40dd73cdd213_0"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNEdge id="_3a21d46f-0ce4-4aac-8d2d-341e9e39f2e0" dmnElementRef="_3529904a-bf24-4a00-bc87-9c76ffe548c8">
+                <di:waypoint x="322.3295799647228" y="320.971720990395"/>
+                <di:waypoint x="322.3295791651441" y="379.97173467860136"/>
+                <di:waypoint x="730.832763465192" y="379.97173467860136"/>
+                <dmndi:DMNLabel sharedStyle="LS_479427d2-a85d-4dca-b8e2-40dd73cdd213_0"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNEdge id="_3e500d71-40fd-4de6-966b-597a19e1e906" dmnElementRef="_be6964bd-bd1f-4d79-bcb4-5f638c4782fc">
+                <di:waypoint x="322.3295791651441" y="497.97172895655547"/>
+                <di:waypoint x="322.3295791651441" y="419.97173467860136"/>
+                <di:waypoint x="730.832763465192" y="419.97173467860136"/>
+                <dmndi:DMNLabel sharedStyle="LS_479427d2-a85d-4dca-b8e2-40dd73cdd213_0"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNEdge id="_e6292dab-9fe3-497a-8518-1ce70a8c9f9e" dmnElementRef="_ed14e62e-4bfa-4ca5-9499-e77d62160d90">
+                <di:waypoint x="883.832771361317" y="141.9717292456382"/>
+                <di:waypoint x="1090.3327671442885" y="141.9717292456382"/>
+                <di:waypoint x="1090.3327671442885" y="314.9717354981652"/>
+                <dmndi:DMNLabel sharedStyle="LS_479427d2-a85d-4dca-b8e2-40dd73cdd213_0"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNEdge id="_55624c2d-0365-4118-995b-795fc9556a7c" dmnElementRef="_03e26c2d-60fc-436d-b810-94b3ca463c08">
+                <di:waypoint x="883.832771361317" y="290.97172480509226"/>
+                <di:waypoint x="1040.3327671442885" y="290.97172480509226"/>
+                <di:waypoint x="1040.3327671442885" y="314.9717354981652"/>
+                <dmndi:DMNLabel sharedStyle="LS_479427d2-a85d-4dca-b8e2-40dd73cdd213_0"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNEdge id="_17bc6e5e-4862-4ff1-952b-27a9ef4e2afd" dmnElementRef="_6ac17403-6b9a-42a1-b29d-2af9f200e2c9">
+                <di:waypoint x="883.8327525749353" y="527.9717253508958"/>
+                <di:waypoint x="1090.3327671442885" y="527.9717253713363"/>
+                <di:waypoint x="1090.3327671442885" y="374.9717354981652"/>
+                <dmndi:DMNLabel sharedStyle="LS_479427d2-a85d-4dca-b8e2-40dd73cdd213_0"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNEdge id="_72a33215-2475-40de-8dec-22f47513f031" dmnElementRef="_552891bf-f70d-4464-8f49-856be4542a40">
+                <di:waypoint x="883.832763465192" y="399.97173467860136"/>
+                <di:waypoint x="1040.3327671442885" y="399.97173467860136"/>
+                <di:waypoint x="1040.3327671442885" y="374.9717354981652"/>
+                <dmndi:DMNLabel sharedStyle="LS_479427d2-a85d-4dca-b8e2-40dd73cdd213_0"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNEdge id="_5e55fa58-3334-43c3-b5dc-7b81c4cf7011" dmnElementRef="_ad957e30-f3d3-41e0-be4d-75f722801004">
+                <di:waypoint x="1166.8327671442885" y="344.9717354981652"/>
+                <di:waypoint x="1234.4327699606079" y="344.9717354981652"/>
+                <dmndi:DMNLabel sharedStyle="LS_479427d2-a85d-4dca-b8e2-40dd73cdd213_0"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNEdge id="_8b2ddcce-a08e-4675-8edb-6469353550d5" dmnElementRef="_866bbab8-170e-4a8e-b8b0-bd4411607b3a">
+                <di:waypoint x="131.48433743542373" y="370.97174320145575"/>
+                <di:waypoint x="131.4843374354237" y="211.11369533463284"/>
+                <di:waypoint x="797.332771361317" y="211.11369533463284"/>
+                <di:waypoint x="797.332771361317" y="260.97172480509226"/>
+                <dmndi:DMNLabel sharedStyle="LS_479427d2-a85d-4dca-b8e2-40dd73cdd213_0"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNEdge id="_da6a70aa-632d-47ce-932b-0c6cc02f6b46" dmnElementRef="_dbc5bedc-580f-47aa-a44e-b96f4a61ef03">
+                <di:waypoint x="390.07394947155876" y="290.971720990395"/>
+                <di:waypoint x="562.6968443048145" y="290.9717248587362"/>
+                <di:waypoint x="730.832771361317" y="290.97172480509226"/>
+                <dmndi:DMNLabel sharedStyle="LS_479427d2-a85d-4dca-b8e2-40dd73cdd213_0"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNEdge id="_6c82a0e2-3d7d-468c-98c1-769fa0fb370e" dmnElementRef="_798b5cf8-2e96-415f-a87c-268c8127fcfd">
+                <di:waypoint x="132.48433743542373" y="429.9717432014558"/>
+                <di:waypoint x="132.4843374354237" y="607.5012187053575"/>
+                <di:waypoint x="807.3327634651919" y="607.5012187053575"/>
+                <di:waypoint x="807.3327525749353" y="557.9717253508958"/>
+                <dmndi:DMNLabel sharedStyle="LS_479427d2-a85d-4dca-b8e2-40dd73cdd213_0"/>
+            </dmndi:DMNEdge>
+            <dmndi:DMNEdge id="_60b17084-61ac-49fe-967e-680d6f83af47" dmnElementRef="_2d89efa7-c145-4d82-929a-4e90c1d2c32f">
+                <di:waypoint x="390.07394867198" y="527.9717289565555"/>
+                <di:waypoint x="730.8327525749353" y="527.9717253508958"/>
+                <dmndi:DMNLabel sharedStyle="LS_479427d2-a85d-4dca-b8e2-40dd73cdd213_0"/>
+            </dmndi:DMNEdge>
+        </dmndi:DMNDiagram>
+        <dmndi:DMNStyle id="LS_479427d2-a85d-4dca-b8e2-40dd73cdd213_0" fontFamily="arial,helvetica,sans-serif" fontSize="11" fontBold="false" fontItalic="false" fontUnderline="false" fontStrikeThrough="false"/>
+    </dmndi:DMNDI>
+</semantic:definitions>
