@@ -194,42 +194,6 @@ special_risk(_,_,0).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%
-%summation
-%%%%%%%%%%%%%%%%%%%%%%%   	
-
-score_risk(TransactionID, Score) :-
-    transaction(TransactionID, CardholderID, MerchantID, Amount, _ ),
-    cardholder(CardholderID, _ , CardholderCountry),
-    merchant(MerchantID, _ , MerchantCountry,_),
-    cardholder_risk(CardholderCountry, CR),
-    merchant_risk(MerchantCountry, MR),
-    amount_risk(Amount, AR),
-    special_risk(CardholderCountry, MerchantCountry, SR),
-    time_comparison(TransactionID, TC),
-    Score is CR + MR + AR + SR +TC.
-
-
-    
-%%%%%%%%%%%%%%%%%%%%%%%
-%Detection
-%%%%%%%%%%%%%%%%%%%%%%% 
-
-detect(TransactionID, accepted, Score):-
-    score_risk(TransactionID, Score),
-    Score =< 100.
-
-detect(TransactionID, stopped, Score):-
-    score_risk(TransactionID, Score),
-    Score > 100,
-    Score =< 150.
-
-detect(TransactionID, rejected, Score):-
-    score_risk(TransactionID, Score),
-    Score > 150.
-    
-
-
-%%%%%%%%%%%%%%%%%%%%%%%
 %Transaction comparison
 %%%%%%%%%%%%%%%%%%%%%%% 
 
@@ -249,6 +213,39 @@ time_comparison(T, 150) :-
 
 time_comparison(_,0).
 
+%%%%%%%%%%%%%%%%%%%%%%%
+%Summation
+%%%%%%%%%%%%%%%%%%%%%%%   	
+
+score_risk(TransactionID, Score) :-
+    transaction(TransactionID, CardholderID, MerchantID, Amount, _ ),
+    cardholder(CardholderID, _ , CardholderCountry),
+    merchant(MerchantID, _ , MerchantCountry,_),
+    cardholder_risk(CardholderCountry, CR),
+    merchant_risk(MerchantCountry, MR),
+    amount_risk(Amount, AR),
+    special_risk(CardholderCountry, MerchantCountry, SR),
+    time_comparison(TransactionID, TC),
+    Score is CR + MR + AR + SR +TC.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%Detection
+%%%%%%%%%%%%%%%%%%%%%%% 
+
+detect(TransactionID, accepted, Score):-
+    score_risk(TransactionID, Score),
+    Score =< 100.
+
+detect(TransactionID, stopped, Score):-
+    score_risk(TransactionID, Score),
+    Score > 100,
+    Score =< 150.
+
+detect(TransactionID, rejected, Score):-
+    score_risk(TransactionID, Score),
+    Score > 150.
+    
 
 %%%%%%%%%%%%%%%%%%%%%%%
 %Use instruction
