@@ -190,7 +190,7 @@ special_risk(Cardholder, Merchant, 30) :-
     Cardholder = switzerland,
     Merchant = south_africa,!.
 
-special_risk(,,0).
+special_risk(_,_,0).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -221,11 +221,11 @@ detect(TransactionID, accepted, Score):-
 detect(TransactionID, stopped, Score):-
     score_risk(TransactionID, Score),
     Score > 100,
-    Score < 150.
+    Score =< 150.
 
 detect(TransactionID, rejected, Score):-
     score_risk(TransactionID, Score),
-    Score >= 150.
+    Score > 150.
     
 
 
@@ -242,14 +242,12 @@ score_risk_comparison(T1, T2):-
     Country1 \= Country2,
     D is abs(Time1-Time2),
     D =< 300.
-    %score_risk(T1, Score),
-    %Result is max(Score, 150),!.
 
 time_comparison(T, 150) :-
-    transaction(T, ,,,),
+    transaction(T,_,_,_,_),
     score_risk_comparison(T,_),!.
 
-time_comparison(_, 0).
+time_comparison(_,0).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%
