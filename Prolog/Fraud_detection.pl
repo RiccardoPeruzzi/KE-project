@@ -119,9 +119,9 @@ cardholder(c2, meyer, germany).
 cardholder(c3, suter, switzerland).
 cardholder(c4, abba, tanzania).
 
-merchant(m1, worldofafrica, south_africa, phisical).
-merchant(m2, windsofthedeserts, morocco, phisical).
-merchant(m3, mamaafrica, south_africa, phisical).
+merchant(m1, worldofafrica, south_africa, physical).
+merchant(m2, windsofthedeserts, morocco, physical).
+merchant(m3, mamaafrica, south_africa, physical).
 
 
 transaction(tx1, c1, m1, 11234, 1715097900). %ora sono le 18.05 07.05.2026
@@ -236,8 +236,8 @@ detect(TransactionID, rejected, Score):-
 score_risk_comparison(T1, T2):-
     transaction(T1, CardholderID, Merchant1, _, Time1),
     transaction(T2, CardholderID, Merchant2, _, Time2),
-    merchant(Merchant1, _, Country1, phisical),
-    merchant(Merchant2, _, Country2, phisical),
+    merchant(Merchant1, _, Country1, physical),
+    merchant(Merchant2, _, Country2, physical),
     T1 \= T2,
     Country1 \= Country2,
     D is abs(Time1-Time2),
