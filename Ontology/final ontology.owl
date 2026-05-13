@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns="http://www.example.org/credit-card-risk-ontology#"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+>
+  <rdf:Description rdf:about="http://www.example.org/credit-card-risk-ontology#locatedIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.example.org/credit-card-risk-ontology#Cardholder"/>
+    <rdfs:range rdf:resource="http://www.example.org/credit-card-risk-ontology#Country"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3b09973a3787486cbfaa20f251d75928">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.example.org/credit-card-risk-ontology#merchantLocatedIn"/>
+    <swrl:argument1 rdf:resource="http://www.example.org/credit-card-risk-ontology#m"/>
+    <swrl:argument2 rdf:resource="http://www.example.org/credit-card-risk-ontology#Italy"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N12bd26c5e7cf4af78f5b0963eef7461e">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DataValuedPropertyAtom"/>
+    <swrl:propertyPredicate rdf:resource="http://www.example.org/credit-card-risk-ontology#hasMerchantRisk"/>
+    <swrl:argument1 rdf:resource="http://www.example.org/credit-card-risk-ontology#m"/>
+    <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</swrl:argument2>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/credit-card-risk-ontology#M1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.example.org/credit-card-risk-ontology#Merchant"/>
+    <merchantLocatedIn rdf:resource="http://www.example.org/credit-card-risk-ontology#SouthAfrica"/>
+    <MerchantName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">worldofafrica</MerchantName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/credit-card-risk-ontology#MerchantRiskItaly">
+    <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+    <swrl:body rdf:nodeID="Ne8b135a6292946b78ba06a1abad8712e"/>
+    <swrl:head rdf:nodeID="N5d5f6c2fb31f4c64b0ee09ad2bea8d27"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/credit-card-risk-ontology#Country">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/credit-card-risk-ontology#belongsToContinent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.example.org/credit-card-risk-ontology#Country"/>
+    <rdfs:range rdf:resource="http://www.example.org/credit-card-risk-ontology#Continent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/credit-card-risk-ontology#Morocco">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.example.org/credit-card-risk-ontology#Country"/>
+    <belongsToContinent rdf:resource="http://www.example.org/credit-card-risk-ontology#Africa"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/credit-card-risk-ontology#C1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.example.org/credit-card-risk-ontology#Cardholder"/>
+    <locatedIn rdf:resource="http://www.example.org/credit-card-risk-ontology#Italy"/>
+    <CardholderName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mensoni</CardholderName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/credit-card-risk-ontology#Decision">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.example.org/credit-card-risk-ontology#Transaction"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/credit-card-risk-ontology#Cardholder">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/credit-card-risk-ontology#MerchantID">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://www.example.org/credit-card-risk-ontology#Merchant"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/credit-card-risk-ontology#SouthAfrica">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.example.org/credit-card-risk-ontology#Country"/>
+    <rdf:type rdf:resource="http://www.example.org/credit-card-risk-ontology#Merchant"/>
+    <belongsToContinent rdf:resource="http://www.example.org/credit-card-risk-ontology#Africa"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/credit-card-risk-ontology#CardholderID">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.example.org/credit-card-risk-ontology#Cardholder"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/credit-card-risk-ontology#Physical">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.example.org/credit-card-risk-ontology#Merchant"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/credit-card-risk-ontology#Italy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.example.org/credit-card-risk-ontology#Country"/>
+    <rdf:type rdf:resource="http://www.example.org/credit-card-risk-ontology#Cardholder"/>
+    <belongsToContinent rdf:resource="http://www.example.org/credit-card-risk-ontology#Europe"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/credit-card-risk-ontology#Stereotype">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.example.org/credit-card-risk-ontology#Merchant"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/credit-card-risk-ontology#hasCardholder">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.example.org/credit-card-risk-ontology#Transaction"/>
+    <rdfs:range rdf:resource="http://www.example.org/credit-card-risk-ontology#Cardholder"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/credit-card-risk-ontology#Timestamp">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.example.org/credit-card-risk-ontology#Transaction"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/credit-card-risk-ontology#CardholderCountry">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.example.org/credit-card-risk-ontology#Cardholder"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/credit-card-risk-ontology#MerchantId">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.example.org/credit-card-risk-ontology#Merchant"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/credit-card-risk-ontology#MerchantCountry">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.example.org/credit-card-risk-ontology#Merchant"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne8b135a6292946b78ba06a1abad8712e">
+    <rdf:first rdf:nodeID="N3b09973a3787486cbfaa20f251d75928"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/credit-card-risk-ontology">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/credit-card-risk-ontology#merchantLocatedIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.example.org/credit-card-risk-ontology#Merchant"/>
+    <rdfs:range rdf:resource="http://www.example.org/credit-card-risk-ontology#Country"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/credit-card-risk-ontology#CardholderName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.example.org/credit-card-risk-ontology#Cardholder"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/credit-card-risk-ontology#hasMerchant">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.example.org/credit-card-risk-ontology#Transaction"/>
+    <rdfs:range rdf:resource="http://www.example.org/credit-card-risk-ontology#Merchant"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/credit-card-risk-ontology#Merchant">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/credit-card-risk-ontology#m1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.example.org/credit-card-risk-ontology#Transaction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N5d5f6c2fb31f4c64b0ee09ad2bea8d27">
+    <rdf:first rdf:nodeID="N12bd26c5e7cf4af78f5b0963eef7461e"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/credit-card-risk-ontology#RiskScore">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.example.org/credit-card-risk-ontology#Transaction"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N77b9afb8e3924a3f8c1437cf278d4677">
+    <rdf:first rdf:resource="http://www.example.org/credit-card-risk-ontology#Physical"/>
+    <rdf:rest rdf:nodeID="Nc9d3bf12cfe44d33bdbabbd675b368c6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/credit-card-risk-ontology#TX1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.example.org/credit-card-risk-ontology#Transaction"/>
+    <hasCardholder rdf:resource="http://www.example.org/credit-card-risk-ontology#C1"/>
+    <hasMerchant rdf:resource="http://www.example.org/credit-card-risk-ontology#M1"/>
+    <Amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11234</Amount>
+    <Timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1715097900</Timestamp>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/credit-card-risk-ontology#MamaAfrica">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.example.org/credit-card-risk-ontology#Merchant"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/credit-card-risk-ontology#Germany">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.example.org/credit-card-risk-ontology#Country"/>
+    <belongsToContinent rdf:resource="http://www.example.org/credit-card-risk-ontology#Europe"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Neeaa2fc06d7248c8bf987a46e7818aed">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:oneOf rdf:nodeID="N77b9afb8e3924a3f8c1437cf278d4677"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/credit-card-risk-ontology#11234">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.example.org/credit-card-risk-ontology#Transaction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/credit-card-risk-ontology#Africa">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.example.org/credit-card-risk-ontology#Continent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/credit-card-risk-ontology#1715097900">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.example.org/credit-card-risk-ontology#Transaction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/credit-card-risk-ontology#c1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.example.org/credit-card-risk-ontology#Transaction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/credit-card-risk-ontology#CardholderId">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.example.org/credit-card-risk-ontology#Transaction"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/credit-card-risk-ontology#Europe">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.example.org/credit-card-risk-ontology#Continent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/credit-card-risk-ontology#TransactionID">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.example.org/credit-card-risk-ontology#Transaction"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc9d3bf12cfe44d33bdbabbd675b368c6">
+    <rdf:first rdf:resource="http://www.example.org/credit-card-risk-ontology#Online"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/credit-card-risk-ontology#Mensoni">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.example.org/credit-card-risk-ontology#Cardholder"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/credit-card-risk-ontology#Switzerland">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.example.org/credit-card-risk-ontology#Country"/>
+    <belongsToContinent rdf:resource="http://www.example.org/credit-card-risk-ontology#Europe"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/credit-card-risk-ontology#Tanzania">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.example.org/credit-card-risk-ontology#Country"/>
+    <belongsToContinent rdf:resource="http://www.example.org/credit-card-risk-ontology#Africa"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/credit-card-risk-ontology#Amount">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.example.org/credit-card-risk-ontology#Transaction"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/credit-card-risk-ontology#MerchantName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="http://www.example.org/credit-card-risk-ontology#Merchant"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/credit-card-risk-ontology#Continent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/credit-card-risk-ontology#Transaction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+</rdf:RDF>
