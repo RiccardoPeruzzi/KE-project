@@ -443,15 +443,13 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Transaction"/>
         <task_3:hasCreditcard rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#card1"/>
         <task_3:hasMerchant rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#worldOfAfrica"/>
-        <task_3:Amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11234</task_3:Amount>
-        <task_3:AmountRisk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"></task_3:AmountRisk>
-        <task_3:CardholderRisk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"></task_3:CardholderRisk>
-        <task_3:MerchantRisk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"></task_3:MerchantRisk>
-        <task_3:RiskScore rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"></task_3:RiskScore>
-        <task_3:SpecialRisk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"></task_3:SpecialRisk>
+        <task_3:Amount rdf:datatype="http://www.w3.org/2001/XMLSchema#float">11234</task_3:Amount>
+
+
+
+
         <task_3:Timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1715097900</task_3:Timestamp>
         <task_3:TransactionID>tx1</task_3:TransactionID>
-        <task_3:decision></task_3:decision>
     </owl:NamedIndividual>
     
 
@@ -462,15 +460,13 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Transaction"/>
         <task_3:hasCreditcard rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Card2"/>
         <task_3:hasMerchant rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#windsOfTheDesert"/>
-        <task_3:Amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12</task_3:Amount>
-        <task_3:AmountRisk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"></task_3:AmountRisk>
-        <task_3:CardholderRisk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"></task_3:CardholderRisk>
-        <task_3:MerchantRisk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"></task_3:MerchantRisk>
-        <task_3:RiskScore rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"></task_3:RiskScore>
-        <task_3:SpecialRisk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"></task_3:SpecialRisk>
+        <task_3:Amount rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12</task_3:Amount>
+
+
+
+
         <task_3:Timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1715097950</task_3:Timestamp>
         <task_3:TransactionID>tx2</task_3:TransactionID>
-        <task_3:decision></task_3:decision>
     </owl:NamedIndividual>
     
 
@@ -481,15 +477,13 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Transaction"/>
         <task_3:hasCreditcard rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#card3"/>
         <task_3:hasMerchant rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#mamaAfrica"/>
-        <task_3:Amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">90</task_3:Amount>
-        <task_3:AmountRisk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"></task_3:AmountRisk>
-        <task_3:CardholderRisk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"></task_3:CardholderRisk>
-        <task_3:MerchantRisk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"></task_3:MerchantRisk>
-        <task_3:RiskScore rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"></task_3:RiskScore>
-        <task_3:SpecialRisk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"></task_3:SpecialRisk>
+        <task_3:Amount rdf:datatype="http://www.w3.org/2001/XMLSchema#float">90</task_3:Amount>
+
+
+
+
         <task_3:Timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1715098950</task_3:Timestamp>
         <task_3:TransactionID>tx3</task_3:TransactionID>
-        <task_3:decision></task_3:decision>
     </owl:NamedIndividual>
     
 
@@ -500,15 +494,13 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Transaction"/>
         <task_3:hasCreditcard rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#card1"/>
         <task_3:hasMerchant rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#windsOfTheDesert"/>
-        <task_3:Amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12</task_3:Amount>
-        <task_3:AmountRisk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"></task_3:AmountRisk>
-        <task_3:CardholderRisk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"></task_3:CardholderRisk>
-        <task_3:MerchantRisk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"></task_3:MerchantRisk>
-        <task_3:RiskScore rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"></task_3:RiskScore>
-        <task_3:SpecialRisk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"></task_3:SpecialRisk>
+        <task_3:Amount rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12</task_3:Amount>
+
+
+
+
         <task_3:Timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1715097950</task_3:Timestamp>
         <task_3:TransactionID>tx4</task_3:TransactionID>
-        <task_3:decision></task_3:decision>
     </owl:NamedIndividual>
     
 
@@ -519,15 +511,13 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Transaction"/>
         <task_3:hasCreditcard rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#card1"/>
         <task_3:hasMerchant rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#windsOfTheDesert"/>
-        <task_3:Amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12</task_3:Amount>
-        <task_3:AmountRisk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"></task_3:AmountRisk>
-        <task_3:CardholderRisk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"></task_3:CardholderRisk>
-        <task_3:MerchantRisk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"></task_3:MerchantRisk>
-        <task_3:RiskScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"></task_3:RiskScore>
-        <task_3:SpecialRisk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"></task_3:SpecialRisk>
+        <task_3:Amount rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12</task_3:Amount>
+
+
+
+
         <task_3:Timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1715098950</task_3:Timestamp>
         <task_3:TransactionID>tx5</task_3:TransactionID>
-        <task_3:decision></task_3:decision>
     </owl:NamedIndividual>
     
 
