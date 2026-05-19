@@ -221,15 +221,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#TimeRisk -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#TimeRisk">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Transaction"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Timestamp -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Timestamp">
@@ -315,6 +306,16 @@
     
 
 
+    <!-- http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Card2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Card2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Creditcard"/>
+        <task_3:hasCardholder rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#meyer"/>
+        <task_3:CardNumber>2222</task_3:CardNumber>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#africa -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#africa">
@@ -329,16 +330,6 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Creditcard"/>
         <task_3:hasCardholder rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#mensoni"/>
         <task_3:CardNumber>1111</task_3:CardNumber>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#card2 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#card2">
-        <rdf:type rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Creditcard"/>
-        <task_3:hasCardholder rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#meyer"/>
-        <task_3:CardNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2222</task_3:CardNumber>
     </owl:NamedIndividual>
     
 
@@ -383,9 +374,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#mamaAfrica">
         <rdf:type rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Merchant"/>
-        <task_3:merchantLocatedIn rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#south_africa"/>
+        <task_3:merchantLocatedIn rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#africa"/>
         <task_3:MerchantName>Mama Africa</task_3:MerchantName>
-        <task_3:StoreType>physical</task_3:StoreType>
     </owl:NamedIndividual>
     
 
@@ -453,18 +443,13 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Transaction"/>
         <task_3:hasCreditcard rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#card1"/>
         <task_3:hasMerchant rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#worldOfAfrica"/>
-        <task_3:Amount rdf:datatype="http://www.w3.org/2001/XMLSchema#float">11234.0</task_3:Amount>
-        <task_3:AmountRisk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</task_3:AmountRisk>
-        <task_3:CardholderRisk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</task_3:CardholderRisk>
-        <task_3:MerchantRisk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</task_3:MerchantRisk>
-        <task_3:RiskScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</task_3:RiskScore>
-        <task_3:RiskScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</task_3:RiskScore>
-        <task_3:SpecialRisk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</task_3:SpecialRisk>
-        <task_3:TimeRisk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</task_3:TimeRisk>
-        <task_3:TimeRisk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</task_3:TimeRisk>
+        <task_3:Amount rdf:datatype="http://www.w3.org/2001/XMLSchema#float">11234</task_3:Amount>
+
+
+
+
         <task_3:Timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1715097900</task_3:Timestamp>
         <task_3:TransactionID>tx1</task_3:TransactionID>
-        <task_3:decision>rejected</task_3:decision>
     </owl:NamedIndividual>
     
 
@@ -473,17 +458,15 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#tx2">
         <rdf:type rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Transaction"/>
+        <task_3:hasCreditcard rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Card2"/>
         <task_3:hasMerchant rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#windsOfTheDesert"/>
-        <task_3:Amount rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</task_3:Amount>
-        <task_3:AmountRisk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</task_3:AmountRisk>
-        <task_3:CardholderRisk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</task_3:CardholderRisk>
-        <task_3:MerchantRisk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</task_3:MerchantRisk>
-        <task_3:RiskScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</task_3:RiskScore>
-        <task_3:SpecialRisk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</task_3:SpecialRisk>
-        <task_3:TimeRisk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</task_3:TimeRisk>
+        <task_3:Amount rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12</task_3:Amount>
+
+
+
+
         <task_3:Timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1715097950</task_3:Timestamp>
         <task_3:TransactionID>tx2</task_3:TransactionID>
-        <task_3:decision>accepted</task_3:decision>
     </owl:NamedIndividual>
     
 
@@ -494,16 +477,13 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Transaction"/>
         <task_3:hasCreditcard rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#card3"/>
         <task_3:hasMerchant rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#mamaAfrica"/>
-        <task_3:Amount rdf:datatype="http://www.w3.org/2001/XMLSchema#float">90.0</task_3:Amount>
-        <task_3:AmountRisk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</task_3:AmountRisk>
-        <task_3:CardholderRisk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</task_3:CardholderRisk>
-        <task_3:MerchantRisk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</task_3:MerchantRisk>
-        <task_3:RiskScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">110</task_3:RiskScore>
-        <task_3:SpecialRisk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</task_3:SpecialRisk>
-        <task_3:TimeRisk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</task_3:TimeRisk>
+        <task_3:Amount rdf:datatype="http://www.w3.org/2001/XMLSchema#float">90</task_3:Amount>
+
+
+
+
         <task_3:Timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1715098950</task_3:Timestamp>
         <task_3:TransactionID>tx3</task_3:TransactionID>
-        <task_3:decision>stopped</task_3:decision>
     </owl:NamedIndividual>
     
 
@@ -514,19 +494,13 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Transaction"/>
         <task_3:hasCreditcard rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#card1"/>
         <task_3:hasMerchant rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#windsOfTheDesert"/>
-        <task_3:Amount rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</task_3:Amount>
-        <task_3:AmountRisk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</task_3:AmountRisk>
-        <task_3:CardholderRisk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</task_3:CardholderRisk>
-        <task_3:MerchantRisk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</task_3:MerchantRisk>
-        <task_3:RiskScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">220</task_3:RiskScore>
-        <task_3:RiskScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</task_3:RiskScore>
-        <task_3:SpecialRisk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</task_3:SpecialRisk>
-        <task_3:TimeRisk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</task_3:TimeRisk>
-        <task_3:TimeRisk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</task_3:TimeRisk>
+        <task_3:Amount rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12</task_3:Amount>
+
+
+
+
         <task_3:Timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1715097950</task_3:Timestamp>
         <task_3:TransactionID>tx4</task_3:TransactionID>
-        <task_3:decision>accepted</task_3:decision>
-        <task_3:decision>rejected</task_3:decision>
     </owl:NamedIndividual>
     
 
@@ -537,16 +511,13 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Transaction"/>
         <task_3:hasCreditcard rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#card1"/>
         <task_3:hasMerchant rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#windsOfTheDesert"/>
-        <task_3:Amount rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</task_3:Amount>
-        <task_3:AmountRisk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</task_3:AmountRisk>
-        <task_3:CardholderRisk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</task_3:CardholderRisk>
-        <task_3:MerchantRisk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</task_3:MerchantRisk>
-        <task_3:RiskScore rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</task_3:RiskScore>
-        <task_3:SpecialRisk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</task_3:SpecialRisk>
-        <task_3:TimeRisk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</task_3:TimeRisk>
+        <task_3:Amount rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12</task_3:Amount>
+
+
+
+
         <task_3:Timestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1715098950</task_3:Timestamp>
         <task_3:TransactionID>tx5</task_3:TransactionID>
-        <task_3:decision>accepted</task_3:decision>
     </owl:NamedIndividual>
     
 
@@ -555,9 +526,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#windsOfTheDesert">
         <rdf:type rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Merchant"/>
-        <task_3:merchantLocatedIn rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#morocco"/>
+        <task_3:merchantLocatedIn rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#africa"/>
         <task_3:MerchantName>Winds of the Desert</task_3:MerchantName>
-        <task_3:StoreType></task_3:StoreType>
     </owl:NamedIndividual>
     
 
@@ -566,41 +536,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#worldOfAfrica">
         <rdf:type rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Merchant"/>
-        <task_3:merchantLocatedIn rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#south_africa"/>
+        <task_3:merchantLocatedIn rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#africa"/>
         <task_3:MerchantName>World of Africa</task_3:MerchantName>
-        <task_3:StoreType>physical</task_3:StoreType>
     </owl:NamedIndividual>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // General axioms
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#germany"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#italy"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#morocco"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#south_africa"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#switzerland"/>
-        </owl:distinctMembers>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
-        <owl:distinctMembers rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#tx1"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#tx2"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#tx3"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#tx4"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#tx5"/>
-        </owl:distinctMembers>
-    </rdf:Description>
     
 
 
@@ -627,6 +565,10 @@
     <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/m">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#italy"/>
+    <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/country">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/a">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
@@ -642,49 +584,16 @@
     <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/sr">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/tr">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/total">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/s">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/t1">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/t2">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/m1">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/m2">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/c1">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/c2">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/time1">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/time2">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/diff">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/absdiff">
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
-    </rdf:Description>
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
         <rdfs:comment></rdfs:comment>
-        <rdfs:label>MerchantRisk2</rdfs:label>
+        <rdfs:label>SpecialRisk2</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>
@@ -694,106 +603,10 @@
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                         <swrl:classPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Transaction"/>
                         <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/t"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#hasMerchant"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/t"/>
-                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/m"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#merchantLocatedIn"/>
-                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/m"/>
-                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#italy"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#MerchantRisk"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/t"/>
-                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</swrl:argument2>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
             </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment></rdfs:comment>
-        <rdfs:label>AmountRisk3</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Transaction"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/t"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Amount"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/t"/>
-                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/a"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
-                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
-                                        <swrl:arguments>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                <rdf:first rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/a"/>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10000</rdf:first>
-                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                    </rdf:Description>
-                                                </rdf:rest>
-                                            </rdf:Description>
-                                        </swrl:arguments>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
         </swrl:body>
         <swrl:head>
             <rdf:Description>
@@ -801,9 +614,9 @@
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#AmountRisk"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#SpecialRisk"/>
                         <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/t"/>
-                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</swrl:argument2>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swrl:argument2>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -898,39 +711,6 @@
                         <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#AmountRisk"/>
                         <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/t"/>
                         <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</swrl:argument2>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment></rdfs:comment>
-        <rdfs:label>TimeRisk2</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Transaction"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/t"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#TimeRisk"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/t"/>
-                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swrl:argument2>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -1071,32 +851,18 @@
                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                         <rdf:first>
                                                             <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#TimeRisk"/>
-                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/t"/>
-                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/tr"/>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#add"/>
+                                                                <swrl:arguments rdf:parseType="Collection">
+                                                                    <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/total"/>
+                                                                    <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/mr"/>
+                                                                    <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/cr"/>
+                                                                    <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/ar"/>
+                                                                    <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/sr"/>
+                                                                </swrl:arguments>
                                                             </rdf:Description>
                                                         </rdf:first>
-                                                        <rdf:rest>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                                <rdf:first>
-                                                                    <rdf:Description>
-                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
-                                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#add"/>
-                                                                        <swrl:arguments rdf:parseType="Collection">
-                                                                            <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/total"/>
-                                                                            <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/mr"/>
-                                                                            <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/cr"/>
-                                                                            <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/ar"/>
-                                                                            <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/sr"/>
-                                                                            <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/tr"/>
-                                                                        </swrl:arguments>
-                                                                    </rdf:Description>
-                                                                </rdf:first>
-                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                            </rdf:Description>
-                                                        </rdf:rest>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
                                                     </rdf:Description>
                                                 </rdf:rest>
                                             </rdf:Description>
@@ -1178,7 +944,7 @@
                                         <rdf:first>
                                             <rdf:Description>
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
-                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual"/>
                                                 <swrl:arguments>
                                                     <rdf:Description>
                                                         <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
@@ -1221,91 +987,6 @@
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
         <rdfs:comment></rdfs:comment>
-        <rdfs:label>CardholderRIsk3</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Transaction"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/t"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#hasCreditcard"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/t"/>
-                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/card"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#hasCardholder"/>
-                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/card"/>
-                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/ch"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                        <rdf:first>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#locatedIn"/>
-                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/ch"/>
-                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/c"/>
-                                            </rdf:Description>
-                                        </rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                <rdf:first>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#belongsToContinent"/>
-                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/c"/>
-                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#africa"/>
-                                                    </rdf:Description>
-                                                </rdf:first>
-                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#CardholderRisk"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/t"/>
-                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</swrl:argument2>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment></rdfs:comment>
         <rdfs:label>RejectRule</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
@@ -1335,7 +1016,7 @@
                                 <rdf:first>
                                     <rdf:Description>
                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
-                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
                                         <swrl:arguments>
                                             <rdf:Description>
                                                 <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
@@ -1437,234 +1118,6 @@
                         <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#decision"/>
                         <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/t"/>
                         <swrl:argument2>accepted</swrl:argument2>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment></rdfs:comment>
-        <rdfs:label>TimeRisk</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Transaction"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/t1"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Transaction"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/t2"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#hasCreditcard"/>
-                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/t1"/>
-                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/card"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                        <rdf:first>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#hasCreditcard"/>
-                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/t2"/>
-                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/card"/>
-                                            </rdf:Description>
-                                        </rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                <rdf:first>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#hasMerchant"/>
-                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/t1"/>
-                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/m1"/>
-                                                    </rdf:Description>
-                                                </rdf:first>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                        <rdf:first>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#hasMerchant"/>
-                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/t2"/>
-                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/m2"/>
-                                                            </rdf:Description>
-                                                        </rdf:first>
-                                                        <rdf:rest>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                                <rdf:first>
-                                                                    <rdf:Description>
-                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#merchantLocatedIn"/>
-                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/m1"/>
-                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/c1"/>
-                                                                    </rdf:Description>
-                                                                </rdf:first>
-                                                                <rdf:rest>
-                                                                    <rdf:Description>
-                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                                        <rdf:first>
-                                                                            <rdf:Description>
-                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#merchantLocatedIn"/>
-                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/m2"/>
-                                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/c2"/>
-                                                                            </rdf:Description>
-                                                                        </rdf:first>
-                                                                        <rdf:rest>
-                                                                            <rdf:Description>
-                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                                                <rdf:first>
-                                                                                    <rdf:Description>
-                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
-                                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/t1"/>
-                                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/t2"/>
-                                                                                    </rdf:Description>
-                                                                                </rdf:first>
-                                                                                <rdf:rest>
-                                                                                    <rdf:Description>
-                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                                                        <rdf:first>
-                                                                                            <rdf:Description>
-                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
-                                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/c1"/>
-                                                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/c2"/>
-                                                                                            </rdf:Description>
-                                                                                        </rdf:first>
-                                                                                        <rdf:rest>
-                                                                                            <rdf:Description>
-                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                                                                <rdf:first>
-                                                                                                    <rdf:Description>
-                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Timestamp"/>
-                                                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/t1"/>
-                                                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/time1"/>
-                                                                                                    </rdf:Description>
-                                                                                                </rdf:first>
-                                                                                                <rdf:rest>
-                                                                                                    <rdf:Description>
-                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                                                                        <rdf:first>
-                                                                                                            <rdf:Description>
-                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Timestamp"/>
-                                                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/t2"/>
-                                                                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/time2"/>
-                                                                                                            </rdf:Description>
-                                                                                                        </rdf:first>
-                                                                                                        <rdf:rest>
-                                                                                                            <rdf:Description>
-                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                                                                                <rdf:first>
-                                                                                                                    <rdf:Description>
-                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
-                                                                                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#subtract"/>
-                                                                                                                        <swrl:arguments rdf:parseType="Collection">
-                                                                                                                            <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/diff"/>
-                                                                                                                            <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/time1"/>
-                                                                                                                            <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/time2"/>
-                                                                                                                        </swrl:arguments>
-                                                                                                                    </rdf:Description>
-                                                                                                                </rdf:first>
-                                                                                                                <rdf:rest>
-                                                                                                                    <rdf:Description>
-                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                                                                                        <rdf:first>
-                                                                                                                            <rdf:Description>
-                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
-                                                                                                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#abs"/>
-                                                                                                                                <swrl:arguments rdf:parseType="Collection">
-                                                                                                                                    <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/absdiff"/>
-                                                                                                                                    <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/diff"/>
-                                                                                                                                </swrl:arguments>
-                                                                                                                            </rdf:Description>
-                                                                                                                        </rdf:first>
-                                                                                                                        <rdf:rest>
-                                                                                                                            <rdf:Description>
-                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                                                                                                <rdf:first>
-                                                                                                                                    <rdf:Description>
-                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
-                                                                                                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual"/>
-                                                                                                                                        <swrl:arguments>
-                                                                                                                                            <rdf:Description>
-                                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                                                                                                <rdf:first rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/absdiff"/>
-                                                                                                                                                <rdf:rest>
-                                                                                                                                                    <rdf:Description>
-                                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                                                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</rdf:first>
-                                                                                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                                                                                                                    </rdf:Description>
-                                                                                                                                                </rdf:rest>
-                                                                                                                                            </rdf:Description>
-                                                                                                                                        </swrl:arguments>
-                                                                                                                                    </rdf:Description>
-                                                                                                                                </rdf:first>
-                                                                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                                                                                            </rdf:Description>
-                                                                                                                        </rdf:rest>
-                                                                                                                    </rdf:Description>
-                                                                                                                </rdf:rest>
-                                                                                                            </rdf:Description>
-                                                                                                        </rdf:rest>
-                                                                                                    </rdf:Description>
-                                                                                                </rdf:rest>
-                                                                                            </rdf:Description>
-                                                                                        </rdf:rest>
-                                                                                    </rdf:Description>
-                                                                                </rdf:rest>
-                                                                            </rdf:Description>
-                                                                        </rdf:rest>
-                                                                    </rdf:Description>
-                                                                </rdf:rest>
-                                                            </rdf:Description>
-                                                        </rdf:rest>
-                                                    </rdf:Description>
-                                                </rdf:rest>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#TimeRisk"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/t1"/>
-                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</swrl:argument2>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -1807,9 +1260,12 @@
                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                         <rdf:first>
                                                             <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
-                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/c"/>
-                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#italy"/>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#notEqual"/>
+                                                                <swrl:arguments rdf:parseType="Collection">
+                                                                    <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/c"/>
+                                                                    <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#italy"/>
+                                                                </swrl:arguments>
                                                             </rdf:Description>
                                                         </rdf:first>
                                                         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -1893,9 +1349,110 @@
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                 <rdf:first>
                                                     <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#merchantLocatedIn"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/m"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/country"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#notEqual"/>
+                                                                <swrl:arguments rdf:parseType="Collection">
+                                                                    <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/country"/>
+                                                                    <rdf:Description rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#italy"/>
+                                                                </swrl:arguments>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#MerchantRisk"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/t"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>CardholderRIsk3</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Transaction"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#hasCreditcard"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/t"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/card"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#hasCardholder"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/card"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/ch"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#locatedIn"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/ch"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/c"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#belongsToContinent"/>
                                                         <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/c"/>
-                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#italy"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#africa"/>
                                                     </rdf:Description>
                                                 </rdf:first>
                                                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -1915,7 +1472,7 @@
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#MerchantRisk"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#CardholderRisk"/>
                         <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/t"/>
                         <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</swrl:argument2>
                     </rdf:Description>
@@ -2025,90 +1582,6 @@
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
         <rdfs:comment></rdfs:comment>
-        <rdfs:label>SpecialRisk2</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Transaction"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/t"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#hasCreditcard"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/t"/>
-                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/card"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#hasCardholder"/>
-                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/card"/>
-                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/ch"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                        <rdf:first>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#locatedIn"/>
-                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/ch"/>
-                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/c"/>
-                                            </rdf:Description>
-                                        </rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                <rdf:first>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
-                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/c"/>
-                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#switzerland"/>
-                                                    </rdf:Description>
-                                                </rdf:first>
-                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#SpecialRisk"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/t"/>
-                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swrl:argument2>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment></rdfs:comment>
         <rdfs:label>CardholderRisk1</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
@@ -2172,6 +1645,135 @@
                         <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#CardholderRisk"/>
                         <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/t"/>
                         <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>MerchantRisk2</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Transaction"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#hasMerchant"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/t"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/m"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#merchantLocatedIn"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/m"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#italy"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#MerchantRisk"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/t"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>AmountRisk3</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Transaction"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Amount"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/t"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/a"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/a"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10000</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#AmountRisk"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/t"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</swrl:argument2>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
