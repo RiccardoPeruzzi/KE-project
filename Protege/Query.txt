@@ -1,0 +1,59 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+PREFIX task_3: <http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#>
+
+
+# 1. Retrieve all instances of transactions
+
+SELECT ?transaction
+WHERE {
+  ?transaction rdf:type task_3:Transaction .
+}
+
+
+# 2. Retrieve all transactions performed at merchants located in South Africa
+
+SELECT ?transaction ?merchant
+WHERE {
+  ?transaction rdf:type task_3:Transaction ;
+               task_3:hasMerchant ?merchant .
+  ?merchant task_3:merchantLocatedIn task_3:south_africa .
+}
+
+
+# 3. Retrieve transactions where the cardholder is located in Europe
+
+SELECT ?transaction ?cardHolder
+WHERE {
+  ?transaction rdf:type task_3:Transaction ;
+               task_3:hasCreditcard ?creditCard .
+  ?creditCard task_3:hasCardholder ?cardHolder .
+  ?cardHolder task_3:locatedIn ?country .
+  ?country task_3:belongsToContinent task_3:europe .
+}
+
+
+# 4. Retrieve transactions with a risk score higher than 100
+
+SELECT ?transaction ?totalRiskScore
+WHERE {
+  ?transaction rdf:type task_3:Transaction ;
+               task_3:RiskScore ?totalRiskScore .
+  FILTER(?totalRiskScore > 100)
+}
+
+
+# 5. Retrieve the merchant risk for transactions occurring with Italian merchants
+
+SELECT ?transactions ?merchant_risk
+WHERE {
+	?transactions rdf:type task_3:Transaction ;
+	task_3:hasMerchant ?merchant ;
+	task_3:MerchantRisk ?merchant_risk .
+	?merchant task_3:merchantLocatedIn task_3:italy .
+}
+
+
