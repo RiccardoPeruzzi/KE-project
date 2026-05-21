@@ -135,7 +135,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#CardNumber">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Creditcard"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
     
 
@@ -328,7 +328,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#card1">
         <rdf:type rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Creditcard"/>
         <task_3:hasCardholder rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#mensoni"/>
-        <task_3:CardNumber>1111</task_3:CardNumber>
+        <task_3:CardNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1111</task_3:CardNumber>
     </owl:NamedIndividual>
     
 
@@ -338,7 +338,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#card2">
         <rdf:type rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Creditcard"/>
         <task_3:hasCardholder rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#meyer"/>
-        <task_3:CardNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2222</task_3:CardNumber>
+        <task_3:CardNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2222</task_3:CardNumber>
     </owl:NamedIndividual>
     
 
@@ -348,7 +348,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#card3">
         <rdf:type rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Creditcard"/>
         <task_3:hasCardholder rdf:resource="http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#suter"/>
-        <task_3:CardNumber>3333</task_3:CardNumber>
+        <task_3:CardNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3333</task_3:CardNumber>
     </owl:NamedIndividual>
     
 
