@@ -1,0 +1,1513 @@
+@prefix : <http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix swrla: <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@prefix task_3: <http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#> .
+@base <http://www.semanticweb.org/nicola/ontologies/2026/4/task_3/> .
+
+<http://www.semanticweb.org/nicola/ontologies/2026/4/task_3> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+swrla:isRuleEnabled rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#belongsToContinent
+task_3:belongsToContinent rdf:type owl:ObjectProperty ,
+                                   owl:FunctionalProperty ;
+                          rdfs:domain task_3:Country ;
+                          rdfs:range task_3:Continent .
+
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#hasCardholder
+task_3:hasCardholder rdf:type owl:ObjectProperty ,
+                              owl:FunctionalProperty ;
+                     rdfs:domain task_3:Creditcard ;
+                     rdfs:range task_3:Cardholder .
+
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#hasCreditcard
+task_3:hasCreditcard rdf:type owl:ObjectProperty ,
+                              owl:FunctionalProperty ;
+                     rdfs:domain task_3:Transaction ;
+                     rdfs:range task_3:Creditcard .
+
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#hasMerchant
+task_3:hasMerchant rdf:type owl:ObjectProperty ,
+                            owl:FunctionalProperty ;
+                   rdfs:domain task_3:Transaction ;
+                   rdfs:range task_3:Merchant .
+
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#locatedIn
+task_3:locatedIn rdf:type owl:ObjectProperty ,
+                          owl:FunctionalProperty ;
+                 rdfs:domain task_3:Cardholder ;
+                 rdfs:range task_3:Country .
+
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#merchantLocatedIn
+task_3:merchantLocatedIn rdf:type owl:ObjectProperty ,
+                                  owl:FunctionalProperty ;
+                         rdfs:domain task_3:Merchant ;
+                         rdfs:range task_3:Country .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Amount
+task_3:Amount rdf:type owl:DatatypeProperty ;
+              rdfs:domain task_3:Transaction ;
+              rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#AmountRisk
+task_3:AmountRisk rdf:type owl:DatatypeProperty ;
+                  rdfs:domain task_3:Transaction ;
+                  rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#CardNumber
+task_3:CardNumber rdf:type owl:DatatypeProperty ;
+                  rdfs:domain task_3:Creditcard ;
+                  rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#CardholderName
+task_3:CardholderName rdf:type owl:DatatypeProperty ;
+                      rdfs:domain task_3:Cardholder ;
+                      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#CardholderRisk
+task_3:CardholderRisk rdf:type owl:DatatypeProperty ;
+                      rdfs:domain task_3:Transaction ;
+                      rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#ContinentName
+task_3:ContinentName rdf:type owl:DatatypeProperty ;
+                     rdfs:domain task_3:Continent ;
+                     rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#CountryName
+task_3:CountryName rdf:type owl:DatatypeProperty ;
+                   rdfs:domain task_3:Country ;
+                   rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#MerchantName
+task_3:MerchantName rdf:type owl:DatatypeProperty ;
+                    rdfs:domain task_3:Merchant ;
+                    rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#MerchantRisk
+task_3:MerchantRisk rdf:type owl:DatatypeProperty ;
+                    rdfs:domain task_3:Transaction ;
+                    rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#RiskScore
+task_3:RiskScore rdf:type owl:DatatypeProperty ;
+                 rdfs:domain task_3:Transaction ;
+                 rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#SpecialRisk
+task_3:SpecialRisk rdf:type owl:DatatypeProperty ;
+                   rdfs:domain task_3:Transaction ;
+                   rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#StoreType
+task_3:StoreType rdf:type owl:DatatypeProperty ;
+                 rdfs:domain task_3:Merchant ;
+                 rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#TimeRisk
+task_3:TimeRisk rdf:type owl:DatatypeProperty ;
+                rdfs:domain task_3:Transaction ;
+                rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Timestamp
+task_3:Timestamp rdf:type owl:DatatypeProperty ;
+                 rdfs:domain task_3:Transaction ;
+                 rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#TransactionID
+task_3:TransactionID rdf:type owl:DatatypeProperty ;
+                     rdfs:domain task_3:Transaction ;
+                     rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#decision
+task_3:decision rdf:type owl:DatatypeProperty ;
+                rdfs:domain task_3:Transaction ;
+                rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Cardholder
+task_3:Cardholder rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Continent
+task_3:Continent rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Country
+task_3:Country rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Creditcard
+task_3:Creditcard rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Merchant
+task_3:Merchant rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#Transaction
+task_3:Transaction rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#africa
+task_3:africa rdf:type owl:NamedIndividual ,
+                       task_3:Continent .
+
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#card1
+task_3:card1 rdf:type owl:NamedIndividual ,
+                      task_3:Creditcard ;
+             task_3:hasCardholder task_3:mensoni ;
+             task_3:CardNumber 1111 .
+
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#card2
+task_3:card2 rdf:type owl:NamedIndividual ,
+                      task_3:Creditcard ;
+             task_3:hasCardholder task_3:meyer ;
+             task_3:CardNumber 2222 .
+
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#card3
+task_3:card3 rdf:type owl:NamedIndividual ,
+                      task_3:Creditcard ;
+             task_3:hasCardholder task_3:suter ;
+             task_3:CardNumber 3333 .
+
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#europe
+task_3:europe rdf:type owl:NamedIndividual ,
+                       task_3:Continent .
+
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#germany
+task_3:germany rdf:type owl:NamedIndividual ,
+                        task_3:Country ;
+               task_3:belongsToContinent task_3:europe .
+
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#italy
+task_3:italy rdf:type owl:NamedIndividual ,
+                      task_3:Country ;
+             task_3:belongsToContinent task_3:europe .
+
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#mamaAfrica
+task_3:mamaAfrica rdf:type owl:NamedIndividual ,
+                           task_3:Merchant ;
+                  task_3:merchantLocatedIn task_3:south_africa ;
+                  task_3:MerchantName "Mama Africa" ;
+                  task_3:StoreType "physical" .
+
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#mammaMia
+task_3:mammaMia rdf:type owl:NamedIndividual ,
+                         task_3:Merchant ;
+                task_3:merchantLocatedIn task_3:italy ;
+                task_3:MerchantName "Mamma Mia" ;
+                task_3:StoreType "physical" .
+
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#mensoni
+task_3:mensoni rdf:type owl:NamedIndividual ,
+                        task_3:Cardholder ;
+               task_3:locatedIn task_3:italy ;
+               task_3:CardholderName "Mensoni" .
+
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#meyer
+task_3:meyer rdf:type owl:NamedIndividual ,
+                      task_3:Cardholder ;
+             task_3:locatedIn task_3:germany ;
+             task_3:CardholderName "Meyer" .
+
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#morocco
+task_3:morocco rdf:type owl:NamedIndividual ,
+                        task_3:Country ;
+               task_3:belongsToContinent task_3:africa .
+
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#south_africa
+task_3:south_africa rdf:type owl:NamedIndividual ,
+                             task_3:Country ;
+                    task_3:belongsToContinent task_3:africa .
+
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#suter
+task_3:suter rdf:type owl:NamedIndividual ,
+                      task_3:Cardholder ;
+             task_3:locatedIn task_3:switzerland ;
+             task_3:CardholderName "Suter" .
+
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#switzerland
+task_3:switzerland rdf:type owl:NamedIndividual ,
+                            task_3:Country ;
+                   task_3:belongsToContinent task_3:europe .
+
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#tx1
+task_3:tx1 rdf:type owl:NamedIndividual ,
+                    task_3:Transaction ;
+           task_3:hasCreditcard task_3:card1 ;
+           task_3:hasMerchant task_3:worldOfAfrica ;
+           task_3:Amount "11234.0"^^xsd:float ;
+           task_3:AmountRisk 90 ;
+           task_3:CardholderRisk 0 ;
+           task_3:MerchantRisk 60 ;
+           task_3:RiskScore 300 ;
+           task_3:SpecialRisk 0 ;
+           task_3:TimeRisk 150 ;
+           task_3:Timestamp 1715097900 ;
+           task_3:TransactionID "tx1" ;
+           task_3:decision "rejected" .
+
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#tx2
+task_3:tx2 rdf:type owl:NamedIndividual ,
+                    task_3:Transaction ;
+           task_3:hasCreditcard task_3:card2 ;
+           task_3:hasMerchant task_3:windsOfTheDesert ;
+           task_3:Amount "12.0"^^xsd:float ;
+           task_3:AmountRisk 10 ;
+           task_3:CardholderRisk 10 ;
+           task_3:MerchantRisk 60 ;
+           task_3:RiskScore 80 ;
+           task_3:SpecialRisk 0 ;
+           task_3:TimeRisk 0 ;
+           task_3:Timestamp 1715097950 ;
+           task_3:TransactionID "tx2" ;
+           task_3:decision "accepted" .
+
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#tx3
+task_3:tx3 rdf:type owl:NamedIndividual ,
+                    task_3:Transaction ;
+           task_3:hasCreditcard task_3:card3 ;
+           task_3:hasMerchant task_3:mamaAfrica ;
+           task_3:Amount "90.0"^^xsd:float ;
+           task_3:AmountRisk 10 ;
+           task_3:CardholderRisk 10 ;
+           task_3:MerchantRisk 60 ;
+           task_3:RiskScore 260 ;
+           task_3:SpecialRisk 30 ;
+           task_3:TimeRisk 150 ;
+           task_3:Timestamp 1715098950 ;
+           task_3:TransactionID "tx3" ;
+           task_3:decision "rejected" .
+
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#tx4
+task_3:tx4 rdf:type owl:NamedIndividual ,
+                    task_3:Transaction ;
+           task_3:hasCreditcard task_3:card1 ;
+           task_3:hasMerchant task_3:windsOfTheDesert ;
+           task_3:Amount "12.0"^^xsd:float ;
+           task_3:AmountRisk 10 ;
+           task_3:CardholderRisk 0 ;
+           task_3:MerchantRisk 60 ;
+           task_3:RiskScore 220 ;
+           task_3:SpecialRisk 0 ;
+           task_3:TimeRisk 150 ;
+           task_3:Timestamp 1715097950 ;
+           task_3:TransactionID "tx4" ;
+           task_3:decision "rejected" .
+
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#tx5
+task_3:tx5 rdf:type owl:NamedIndividual ,
+                    task_3:Transaction ;
+           task_3:hasCreditcard task_3:card3 ;
+           task_3:hasMerchant task_3:windsOfTheDesert ;
+           task_3:Amount "12.0"^^xsd:float ;
+           task_3:AmountRisk 10 ;
+           task_3:CardholderRisk 10 ;
+           task_3:MerchantRisk 60 ;
+           task_3:RiskScore 230 ;
+           task_3:SpecialRisk 0 ;
+           task_3:TimeRisk 150 ;
+           task_3:Timestamp 1715098951 ;
+           task_3:TransactionID "tx5" ;
+           task_3:decision "rejected" .
+
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#tx6
+task_3:tx6 rdf:type owl:NamedIndividual ,
+                    task_3:Transaction ;
+           task_3:hasCreditcard task_3:card2 ;
+           task_3:hasMerchant task_3:mammaMia ;
+           task_3:Amount "512.0"^^xsd:float ;
+           task_3:AmountRisk 10 ;
+           task_3:CardholderRisk 10 ;
+           task_3:MerchantRisk 10 ;
+           task_3:RiskScore 30 ;
+           task_3:SpecialRisk 0 ;
+           task_3:TimeRisk 0 ;
+           task_3:Timestamp 1715095950 ;
+           task_3:TransactionID "tx6" ;
+           task_3:decision "accepted" .
+
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#windsOfTheDesert
+task_3:windsOfTheDesert rdf:type owl:NamedIndividual ,
+                                 task_3:Merchant ;
+                        task_3:merchantLocatedIn task_3:morocco ;
+                        task_3:MerchantName "Winds of the Desert" ;
+                        task_3:StoreType "" .
+
+
+###  http://www.semanticweb.org/nicola/ontologies/2026/4/task_3#worldOfAfrica
+task_3:worldOfAfrica rdf:type owl:NamedIndividual ,
+                              task_3:Merchant ;
+                     task_3:merchantLocatedIn task_3:south_africa ;
+                     task_3:MerchantName "World of Africa" ;
+                     task_3:StoreType "physical" .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( task_3:germany
+                        task_3:italy
+                        task_3:morocco
+                        task_3:south_africa
+                        task_3:switzerland
+                      )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( task_3:tx1
+                        task_3:tx2
+                        task_3:tx3
+                        task_3:tx4
+                        task_3:tx5
+                        task_3:tx6
+                      )
+] .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+:t rdf:type swrl:Variable .
+
+:card rdf:type swrl:Variable .
+
+:ch rdf:type swrl:Variable .
+
+:c rdf:type swrl:Variable .
+
+:m rdf:type swrl:Variable .
+
+:switzerland rdf:type swrl:Variable .
+
+:country rdf:type swrl:Variable .
+
+:a rdf:type swrl:Variable .
+
+:mr rdf:type swrl:Variable .
+
+:cr rdf:type swrl:Variable .
+
+:ar rdf:type swrl:Variable .
+
+:sr rdf:type swrl:Variable .
+
+:tr rdf:type swrl:Variable .
+
+:total rdf:type swrl:Variable .
+
+:s rdf:type swrl:Variable .
+
+:t1 rdf:type swrl:Variable .
+
+:t2 rdf:type swrl:Variable .
+
+:m1 rdf:type swrl:Variable .
+
+:m2 rdf:type swrl:Variable .
+
+:c1 rdf:type swrl:Variable .
+
+:c2 rdf:type swrl:Variable .
+
+:time1 rdf:type swrl:Variable .
+
+:time2 rdf:type swrl:Variable .
+
+:diff rdf:type swrl:Variable .
+
+:absdiff rdf:type swrl:Variable .
+
+[ swrla:isRuleEnabled "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "CardholderRisk1" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate task_3:Transaction ;
+                           swrl:argument1 :t
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate task_3:hasCreditcard ;
+                                      swrl:argument1 :t ;
+                                      swrl:argument2 :card
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                 swrl:propertyPredicate task_3:hasCardholder ;
+                                                 swrl:argument1 :card ;
+                                                 swrl:argument2 :ch
+                                               ] ;
+                                     rdf:rest [ rdf:type swrl:AtomList ;
+                                                rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                            swrl:propertyPredicate task_3:locatedIn ;
+                                                            swrl:argument1 :ch ;
+                                                            swrl:argument2 task_3:italy
+                                                          ] ;
+                                                rdf:rest rdf:nil
+                                              ]
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                           swrl:propertyPredicate task_3:CardholderRisk ;
+                           swrl:argument1 :t ;
+                           swrl:argument2 0
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ swrla:isRuleEnabled "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "MerchantRisk2" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate task_3:Transaction ;
+                           swrl:argument1 :t
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate task_3:hasMerchant ;
+                                      swrl:argument1 :t ;
+                                      swrl:argument2 :m
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                 swrl:propertyPredicate task_3:merchantLocatedIn ;
+                                                 swrl:argument1 :m ;
+                                                 swrl:argument2 task_3:italy
+                                               ] ;
+                                     rdf:rest rdf:nil
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                           swrl:propertyPredicate task_3:MerchantRisk ;
+                           swrl:argument1 :t ;
+                           swrl:argument2 10
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ swrla:isRuleEnabled "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "AmountRisk3" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate task_3:Transaction ;
+                           swrl:argument1 :t
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                                      swrl:propertyPredicate task_3:Amount ;
+                                      swrl:argument1 :t ;
+                                      swrl:argument2 :a
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:BuiltinAtom ;
+                                                 swrl:builtin swrlb:greaterThan ;
+                                                 swrl:arguments [ rdf:type rdf:List ;
+                                                                  rdf:first :a ;
+                                                                  rdf:rest [ rdf:type rdf:List ;
+                                                                             rdf:first 10000 ;
+                                                                             rdf:rest rdf:nil
+                                                                           ]
+                                                                ]
+                                               ] ;
+                                     rdf:rest rdf:nil
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                           swrl:propertyPredicate task_3:AmountRisk ;
+                           swrl:argument1 :t ;
+                           swrl:argument2 90
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ swrla:isRuleEnabled "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "CardholderRisk3" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate task_3:Transaction ;
+                           swrl:argument1 :t
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate task_3:hasCreditcard ;
+                                      swrl:argument1 :t ;
+                                      swrl:argument2 :card
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                 swrl:propertyPredicate task_3:hasCardholder ;
+                                                 swrl:argument1 :card ;
+                                                 swrl:argument2 :ch
+                                               ] ;
+                                     rdf:rest [ rdf:type swrl:AtomList ;
+                                                rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                            swrl:propertyPredicate task_3:locatedIn ;
+                                                            swrl:argument1 :ch ;
+                                                            swrl:argument2 :c
+                                                          ] ;
+                                                rdf:rest [ rdf:type swrl:AtomList ;
+                                                           rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                       swrl:propertyPredicate task_3:belongsToContinent ;
+                                                                       swrl:argument1 :c ;
+                                                                       swrl:argument2 task_3:africa
+                                                                     ] ;
+                                                           rdf:rest rdf:nil
+                                                         ]
+                                              ]
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                           swrl:propertyPredicate task_3:CardholderRisk ;
+                           swrl:argument1 :t ;
+                           swrl:argument2 20
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ swrla:isRuleEnabled "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "AmountRisk2" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate task_3:Transaction ;
+                           swrl:argument1 :t
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                                      swrl:propertyPredicate task_3:Amount ;
+                                      swrl:argument1 :t ;
+                                      swrl:argument2 :a
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:BuiltinAtom ;
+                                                 swrl:builtin swrlb:greaterThanOrEqual ;
+                                                 swrl:arguments [ rdf:type rdf:List ;
+                                                                  rdf:first :a ;
+                                                                  rdf:rest [ rdf:type rdf:List ;
+                                                                             rdf:first 1000 ;
+                                                                             rdf:rest rdf:nil
+                                                                           ]
+                                                                ]
+                                               ] ;
+                                     rdf:rest [ rdf:type swrl:AtomList ;
+                                                rdf:first [ rdf:type swrl:BuiltinAtom ;
+                                                            swrl:builtin swrlb:lessThanOrEqual ;
+                                                            swrl:arguments [ rdf:type rdf:List ;
+                                                                             rdf:first :a ;
+                                                                             rdf:rest [ rdf:type rdf:List ;
+                                                                                        rdf:first 10000 ;
+                                                                                        rdf:rest rdf:nil
+                                                                                      ]
+                                                                           ]
+                                                          ] ;
+                                                rdf:rest rdf:nil
+                                              ]
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                           swrl:propertyPredicate task_3:AmountRisk ;
+                           swrl:argument1 :t ;
+                           swrl:argument2 60
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ swrla:isRuleEnabled "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "AmountRisk1" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate task_3:Transaction ;
+                           swrl:argument1 :t
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                                      swrl:propertyPredicate task_3:Amount ;
+                                      swrl:argument1 :t ;
+                                      swrl:argument2 :a
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:BuiltinAtom ;
+                                                 swrl:builtin swrlb:lessThan ;
+                                                 swrl:arguments [ rdf:type rdf:List ;
+                                                                  rdf:first :a ;
+                                                                  rdf:rest [ rdf:type rdf:List ;
+                                                                             rdf:first 1000 ;
+                                                                             rdf:rest rdf:nil
+                                                                           ]
+                                                                ]
+                                               ] ;
+                                     rdf:rest rdf:nil
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                           swrl:propertyPredicate task_3:AmountRisk ;
+                           swrl:argument1 :t ;
+                           swrl:argument2 10
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ swrla:isRuleEnabled "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "SumRule" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate task_3:Transaction ;
+                           swrl:argument1 :t
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                                      swrl:propertyPredicate task_3:MerchantRisk ;
+                                      swrl:argument1 :t ;
+                                      swrl:argument2 :mr
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                                                 swrl:propertyPredicate task_3:CardholderRisk ;
+                                                 swrl:argument1 :t ;
+                                                 swrl:argument2 :cr
+                                               ] ;
+                                     rdf:rest [ rdf:type swrl:AtomList ;
+                                                rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                                                            swrl:propertyPredicate task_3:AmountRisk ;
+                                                            swrl:argument1 :t ;
+                                                            swrl:argument2 :ar
+                                                          ] ;
+                                                rdf:rest [ rdf:type swrl:AtomList ;
+                                                           rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                                                                       swrl:propertyPredicate task_3:SpecialRisk ;
+                                                                       swrl:argument1 :t ;
+                                                                       swrl:argument2 :sr
+                                                                     ] ;
+                                                           rdf:rest [ rdf:type swrl:AtomList ;
+                                                                      rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                                                                                  swrl:propertyPredicate task_3:TimeRisk ;
+                                                                                  swrl:argument1 :t ;
+                                                                                  swrl:argument2 :tr
+                                                                                ] ;
+                                                                      rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                 rdf:first [ rdf:type swrl:BuiltinAtom ;
+                                                                                             swrl:builtin swrlb:add ;
+                                                                                             swrl:arguments ( :total
+                                                                                                              :mr
+                                                                                                              :cr
+                                                                                                              :ar
+                                                                                                              :sr
+                                                                                                              :tr
+                                                                                                            )
+                                                                                           ] ;
+                                                                                 rdf:rest rdf:nil
+                                                                               ]
+                                                                    ]
+                                                         ]
+                                              ]
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                           swrl:propertyPredicate task_3:RiskScore ;
+                           swrl:argument1 :t ;
+                           swrl:argument2 :total
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ swrla:isRuleEnabled "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "BlockRule" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate task_3:Transaction ;
+                           swrl:argument1 :t
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                                      swrl:propertyPredicate task_3:RiskScore ;
+                                      swrl:argument1 :t ;
+                                      swrl:argument2 :s
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:BuiltinAtom ;
+                                                 swrl:builtin swrlb:greaterThan ;
+                                                 swrl:arguments [ rdf:type rdf:List ;
+                                                                  rdf:first :s ;
+                                                                  rdf:rest [ rdf:type rdf:List ;
+                                                                             rdf:first 100 ;
+                                                                             rdf:rest rdf:nil
+                                                                           ]
+                                                                ]
+                                               ] ;
+                                     rdf:rest [ rdf:type swrl:AtomList ;
+                                                rdf:first [ rdf:type swrl:BuiltinAtom ;
+                                                            swrl:builtin swrlb:lessThan ;
+                                                            swrl:arguments [ rdf:type rdf:List ;
+                                                                             rdf:first :s ;
+                                                                             rdf:rest [ rdf:type rdf:List ;
+                                                                                        rdf:first 150 ;
+                                                                                        rdf:rest rdf:nil
+                                                                                      ]
+                                                                           ]
+                                                          ] ;
+                                                rdf:rest rdf:nil
+                                              ]
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                           swrl:propertyPredicate task_3:decision ;
+                           swrl:argument1 :t ;
+                           swrl:argument2 "stopped"
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ swrla:isRuleEnabled "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "RejectRule" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate task_3:Transaction ;
+                           swrl:argument1 :t
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                                      swrl:propertyPredicate task_3:RiskScore ;
+                                      swrl:argument1 :t ;
+                                      swrl:argument2 :s
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:BuiltinAtom ;
+                                                 swrl:builtin swrlb:greaterThanOrEqual ;
+                                                 swrl:arguments [ rdf:type rdf:List ;
+                                                                  rdf:first :s ;
+                                                                  rdf:rest [ rdf:type rdf:List ;
+                                                                             rdf:first 150 ;
+                                                                             rdf:rest rdf:nil
+                                                                           ]
+                                                                ]
+                                               ] ;
+                                     rdf:rest rdf:nil
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                           swrl:propertyPredicate task_3:decision ;
+                           swrl:argument1 :t ;
+                           swrl:argument2 "rejected"
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ swrla:isRuleEnabled "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "AcceptedRule" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate task_3:Transaction ;
+                           swrl:argument1 :t
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                                      swrl:propertyPredicate task_3:RiskScore ;
+                                      swrl:argument1 :t ;
+                                      swrl:argument2 :s
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:BuiltinAtom ;
+                                                 swrl:builtin swrlb:lessThanOrEqual ;
+                                                 swrl:arguments [ rdf:type rdf:List ;
+                                                                  rdf:first :s ;
+                                                                  rdf:rest [ rdf:type rdf:List ;
+                                                                             rdf:first 100 ;
+                                                                             rdf:rest rdf:nil
+                                                                           ]
+                                                                ]
+                                               ] ;
+                                     rdf:rest rdf:nil
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                           swrl:propertyPredicate task_3:decision ;
+                           swrl:argument1 :t ;
+                           swrl:argument2 "accepted"
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ swrla:isRuleEnabled "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "TimeRisk2" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate task_3:Transaction ;
+                           swrl:argument1 :t1
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:ClassAtom ;
+                                      swrl:classPredicate task_3:Transaction ;
+                                      swrl:argument1 :t2
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                 swrl:propertyPredicate task_3:hasCreditcard ;
+                                                 swrl:argument1 :t1 ;
+                                                 swrl:argument2 :card
+                                               ] ;
+                                     rdf:rest [ rdf:type swrl:AtomList ;
+                                                rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                            swrl:propertyPredicate task_3:hasCreditcard ;
+                                                            swrl:argument1 :t2 ;
+                                                            swrl:argument2 :card
+                                                          ] ;
+                                                rdf:rest [ rdf:type swrl:AtomList ;
+                                                           rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                       swrl:propertyPredicate task_3:hasMerchant ;
+                                                                       swrl:argument1 :t1 ;
+                                                                       swrl:argument2 :m1
+                                                                     ] ;
+                                                           rdf:rest [ rdf:type swrl:AtomList ;
+                                                                      rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                                  swrl:propertyPredicate task_3:hasMerchant ;
+                                                                                  swrl:argument1 :t2 ;
+                                                                                  swrl:argument2 :m2
+                                                                                ] ;
+                                                                      rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                 rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                                             swrl:propertyPredicate task_3:merchantLocatedIn ;
+                                                                                             swrl:argument1 :m1 ;
+                                                                                             swrl:argument2 :c1
+                                                                                           ] ;
+                                                                                 rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                            rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                                                        swrl:propertyPredicate task_3:merchantLocatedIn ;
+                                                                                                        swrl:argument1 :m2 ;
+                                                                                                        swrl:argument2 :c2
+                                                                                                      ] ;
+                                                                                            rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                                       rdf:first [ rdf:type swrl:DifferentIndividualsAtom ;
+                                                                                                                   swrl:argument1 :t1 ;
+                                                                                                                   swrl:argument2 :t2
+                                                                                                                 ] ;
+                                                                                                       rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                                                  rdf:first [ rdf:type swrl:DifferentIndividualsAtom ;
+                                                                                                                              swrl:argument1 :c1 ;
+                                                                                                                              swrl:argument2 :c2
+                                                                                                                            ] ;
+                                                                                                                  rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                                                             rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                                                                                                                                         swrl:propertyPredicate task_3:Timestamp ;
+                                                                                                                                         swrl:argument1 :t1 ;
+                                                                                                                                         swrl:argument2 :time1
+                                                                                                                                       ] ;
+                                                                                                                             rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                                                                        rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                                                                                                                                                    swrl:propertyPredicate task_3:Timestamp ;
+                                                                                                                                                    swrl:argument1 :t2 ;
+                                                                                                                                                    swrl:argument2 :time2
+                                                                                                                                                  ] ;
+                                                                                                                                        rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                                                                                   rdf:first [ rdf:type swrl:BuiltinAtom ;
+                                                                                                                                                               swrl:builtin swrlb:subtract ;
+                                                                                                                                                               swrl:arguments ( :diff
+                                                                                                                                                                                :time1
+                                                                                                                                                                                :time2
+                                                                                                                                                                              )
+                                                                                                                                                             ] ;
+                                                                                                                                                   rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                                                                                              rdf:first [ rdf:type swrl:BuiltinAtom ;
+                                                                                                                                                                          swrl:builtin swrlb:abs ;
+                                                                                                                                                                          swrl:arguments ( :absdiff
+                                                                                                                                                                                           :diff
+                                                                                                                                                                                         )
+                                                                                                                                                                        ] ;
+                                                                                                                                                              rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                                                                                                         rdf:first [ rdf:type swrl:BuiltinAtom ;
+                                                                                                                                                                                     swrl:builtin swrlb:greaterThan ;
+                                                                                                                                                                                     swrl:arguments [ rdf:type rdf:List ;
+                                                                                                                                                                                                      rdf:first :absdiff ;
+                                                                                                                                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                                                 rdf:first 300 ;
+                                                                                                                                                                                                                 rdf:rest rdf:nil
+                                                                                                                                                                                                               ]
+                                                                                                                                                                                                    ]
+                                                                                                                                                                                   ] ;
+                                                                                                                                                                         rdf:rest rdf:nil
+                                                                                                                                                                       ]
+                                                                                                                                                            ]
+                                                                                                                                                 ]
+                                                                                                                                      ]
+                                                                                                                           ]
+                                                                                                                ]
+                                                                                                     ]
+                                                                                          ]
+                                                                               ]
+                                                                    ]
+                                                         ]
+                                              ]
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                           swrl:propertyPredicate task_3:TimeRisk ;
+                           swrl:argument1 :t1 ;
+                           swrl:argument2 0
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ swrla:isRuleEnabled "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "TimeRisk" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate task_3:Transaction ;
+                           swrl:argument1 :t1
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:ClassAtom ;
+                                      swrl:classPredicate task_3:Transaction ;
+                                      swrl:argument1 :t2
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                 swrl:propertyPredicate task_3:hasCreditcard ;
+                                                 swrl:argument1 :t1 ;
+                                                 swrl:argument2 :card
+                                               ] ;
+                                     rdf:rest [ rdf:type swrl:AtomList ;
+                                                rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                            swrl:propertyPredicate task_3:hasCreditcard ;
+                                                            swrl:argument1 :t2 ;
+                                                            swrl:argument2 :card
+                                                          ] ;
+                                                rdf:rest [ rdf:type swrl:AtomList ;
+                                                           rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                       swrl:propertyPredicate task_3:hasMerchant ;
+                                                                       swrl:argument1 :t1 ;
+                                                                       swrl:argument2 :m1
+                                                                     ] ;
+                                                           rdf:rest [ rdf:type swrl:AtomList ;
+                                                                      rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                                  swrl:propertyPredicate task_3:hasMerchant ;
+                                                                                  swrl:argument1 :t2 ;
+                                                                                  swrl:argument2 :m2
+                                                                                ] ;
+                                                                      rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                 rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                                             swrl:propertyPredicate task_3:merchantLocatedIn ;
+                                                                                             swrl:argument1 :m1 ;
+                                                                                             swrl:argument2 :c1
+                                                                                           ] ;
+                                                                                 rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                            rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                                                        swrl:propertyPredicate task_3:merchantLocatedIn ;
+                                                                                                        swrl:argument1 :m2 ;
+                                                                                                        swrl:argument2 :c2
+                                                                                                      ] ;
+                                                                                            rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                                       rdf:first [ rdf:type swrl:DifferentIndividualsAtom ;
+                                                                                                                   swrl:argument1 :t1 ;
+                                                                                                                   swrl:argument2 :t2
+                                                                                                                 ] ;
+                                                                                                       rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                                                  rdf:first [ rdf:type swrl:DifferentIndividualsAtom ;
+                                                                                                                              swrl:argument1 :c1 ;
+                                                                                                                              swrl:argument2 :c2
+                                                                                                                            ] ;
+                                                                                                                  rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                                                             rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                                                                                                                                         swrl:propertyPredicate task_3:Timestamp ;
+                                                                                                                                         swrl:argument1 :t1 ;
+                                                                                                                                         swrl:argument2 :time1
+                                                                                                                                       ] ;
+                                                                                                                             rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                                                                        rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                                                                                                                                                    swrl:propertyPredicate task_3:Timestamp ;
+                                                                                                                                                    swrl:argument1 :t2 ;
+                                                                                                                                                    swrl:argument2 :time2
+                                                                                                                                                  ] ;
+                                                                                                                                        rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                                                                                   rdf:first [ rdf:type swrl:BuiltinAtom ;
+                                                                                                                                                               swrl:builtin swrlb:subtract ;
+                                                                                                                                                               swrl:arguments ( :diff
+                                                                                                                                                                                :time1
+                                                                                                                                                                                :time2
+                                                                                                                                                                              )
+                                                                                                                                                             ] ;
+                                                                                                                                                   rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                                                                                              rdf:first [ rdf:type swrl:BuiltinAtom ;
+                                                                                                                                                                          swrl:builtin swrlb:abs ;
+                                                                                                                                                                          swrl:arguments ( :absdiff
+                                                                                                                                                                                           :diff
+                                                                                                                                                                                         )
+                                                                                                                                                                        ] ;
+                                                                                                                                                              rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                                                                                                         rdf:first [ rdf:type swrl:BuiltinAtom ;
+                                                                                                                                                                                     swrl:builtin swrlb:lessThanOrEqual ;
+                                                                                                                                                                                     swrl:arguments [ rdf:type rdf:List ;
+                                                                                                                                                                                                      rdf:first :absdiff ;
+                                                                                                                                                                                                      rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                                                 rdf:first 300 ;
+                                                                                                                                                                                                                 rdf:rest rdf:nil
+                                                                                                                                                                                                               ]
+                                                                                                                                                                                                    ]
+                                                                                                                                                                                   ] ;
+                                                                                                                                                                         rdf:rest rdf:nil
+                                                                                                                                                                       ]
+                                                                                                                                                            ]
+                                                                                                                                                 ]
+                                                                                                                                      ]
+                                                                                                                           ]
+                                                                                                                ]
+                                                                                                     ]
+                                                                                          ]
+                                                                               ]
+                                                                    ]
+                                                         ]
+                                              ]
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                           swrl:propertyPredicate task_3:TimeRisk ;
+                           swrl:argument1 :t1 ;
+                           swrl:argument2 150
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ swrla:isRuleEnabled "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "MerchantRisk1" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate task_3:Transaction ;
+                           swrl:argument1 :t
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate task_3:hasMerchant ;
+                                      swrl:argument1 :t ;
+                                      swrl:argument2 :m
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                 swrl:propertyPredicate task_3:merchantLocatedIn ;
+                                                 swrl:argument1 :m ;
+                                                 swrl:argument2 :c
+                                               ] ;
+                                     rdf:rest [ rdf:type swrl:AtomList ;
+                                                rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                            swrl:propertyPredicate task_3:belongsToContinent ;
+                                                            swrl:argument1 :c ;
+                                                            swrl:argument2 task_3:africa
+                                                          ] ;
+                                                rdf:rest rdf:nil
+                                              ]
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                           swrl:propertyPredicate task_3:MerchantRisk ;
+                           swrl:argument1 :t ;
+                           swrl:argument2 60
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ swrla:isRuleEnabled "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "CardholderRisk2" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate task_3:Transaction ;
+                           swrl:argument1 :t
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate task_3:hasCreditcard ;
+                                      swrl:argument1 :t ;
+                                      swrl:argument2 :card
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                 swrl:propertyPredicate task_3:hasCardholder ;
+                                                 swrl:argument1 :card ;
+                                                 swrl:argument2 :ch
+                                               ] ;
+                                     rdf:rest [ rdf:type swrl:AtomList ;
+                                                rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                            swrl:propertyPredicate task_3:locatedIn ;
+                                                            swrl:argument1 :ch ;
+                                                            swrl:argument2 :c
+                                                          ] ;
+                                                rdf:rest [ rdf:type swrl:AtomList ;
+                                                           rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                       swrl:propertyPredicate task_3:belongsToContinent ;
+                                                                       swrl:argument1 :c ;
+                                                                       swrl:argument2 task_3:europe
+                                                                     ] ;
+                                                           rdf:rest [ rdf:type swrl:AtomList ;
+                                                                      rdf:first [ rdf:type swrl:DifferentIndividualsAtom ;
+                                                                                  swrl:argument1 :c ;
+                                                                                  swrl:argument2 task_3:italy
+                                                                                ] ;
+                                                                      rdf:rest rdf:nil
+                                                                    ]
+                                                         ]
+                                              ]
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                           swrl:propertyPredicate task_3:CardholderRisk ;
+                           swrl:argument1 :t ;
+                           swrl:argument2 10
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ swrla:isRuleEnabled "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "MerchantRisk3" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate task_3:Transaction ;
+                           swrl:argument1 :t
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate task_3:hasMerchant ;
+                                      swrl:argument1 :t ;
+                                      swrl:argument2 :m
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                 swrl:propertyPredicate task_3:merchantLocatedIn ;
+                                                 swrl:argument1 :m ;
+                                                 swrl:argument2 :c
+                                               ] ;
+                                     rdf:rest [ rdf:type swrl:AtomList ;
+                                                rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                            swrl:propertyPredicate task_3:belongsToContinent ;
+                                                            swrl:argument1 :c ;
+                                                            swrl:argument2 task_3:europe
+                                                          ] ;
+                                                rdf:rest [ rdf:type swrl:AtomList ;
+                                                           rdf:first [ rdf:type swrl:DifferentIndividualsAtom ;
+                                                                       swrl:argument1 :c ;
+                                                                       swrl:argument2 task_3:italy
+                                                                     ] ;
+                                                           rdf:rest rdf:nil
+                                                         ]
+                                              ]
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                           swrl:propertyPredicate task_3:MerchantRisk ;
+                           swrl:argument1 :t ;
+                           swrl:argument2 20
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ swrla:isRuleEnabled "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "SpecialRisk" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate task_3:Transaction ;
+                           swrl:argument1 :t
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate task_3:hasCreditcard ;
+                                      swrl:argument1 :t ;
+                                      swrl:argument2 :card
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                 swrl:propertyPredicate task_3:hasCardholder ;
+                                                 swrl:argument1 :card ;
+                                                 swrl:argument2 :ch
+                                               ] ;
+                                     rdf:rest [ rdf:type swrl:AtomList ;
+                                                rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                            swrl:propertyPredicate task_3:locatedIn ;
+                                                            swrl:argument1 :ch ;
+                                                            swrl:argument2 :switzerland
+                                                          ] ;
+                                                rdf:rest [ rdf:type swrl:AtomList ;
+                                                           rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                       swrl:propertyPredicate task_3:hasMerchant ;
+                                                                       swrl:argument1 :t ;
+                                                                       swrl:argument2 :m
+                                                                     ] ;
+                                                           rdf:rest [ rdf:type swrl:AtomList ;
+                                                                      rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                                  swrl:propertyPredicate task_3:merchantLocatedIn ;
+                                                                                  swrl:argument1 :m ;
+                                                                                  swrl:argument2 :country
+                                                                                ] ;
+                                                                      rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                 rdf:first [ rdf:type swrl:DifferentIndividualsAtom ;
+                                                                                             swrl:argument1 :country ;
+                                                                                             swrl:argument2 task_3:south_africa
+                                                                                           ] ;
+                                                                                 rdf:rest rdf:nil
+                                                                               ]
+                                                                    ]
+                                                         ]
+                                              ]
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                           swrl:propertyPredicate task_3:SpecialRisk ;
+                           swrl:argument1 :t ;
+                           swrl:argument2 0
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ swrla:isRuleEnabled "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "SpecialRisk1" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate task_3:Transaction ;
+                           swrl:argument1 :t
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate task_3:hasCreditcard ;
+                                      swrl:argument1 :t ;
+                                      swrl:argument2 :card
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                 swrl:propertyPredicate task_3:hasCardholder ;
+                                                 swrl:argument1 :card ;
+                                                 swrl:argument2 :ch
+                                               ] ;
+                                     rdf:rest [ rdf:type swrl:AtomList ;
+                                                rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                            swrl:propertyPredicate task_3:locatedIn ;
+                                                            swrl:argument1 :ch ;
+                                                            swrl:argument2 task_3:switzerland
+                                                          ] ;
+                                                rdf:rest [ rdf:type swrl:AtomList ;
+                                                           rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                       swrl:propertyPredicate task_3:hasMerchant ;
+                                                                       swrl:argument1 :t ;
+                                                                       swrl:argument2 :m
+                                                                     ] ;
+                                                           rdf:rest [ rdf:type swrl:AtomList ;
+                                                                      rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                                  swrl:propertyPredicate task_3:merchantLocatedIn ;
+                                                                                  swrl:argument1 :m ;
+                                                                                  swrl:argument2 task_3:south_africa
+                                                                                ] ;
+                                                                      rdf:rest rdf:nil
+                                                                    ]
+                                                         ]
+                                              ]
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                           swrl:propertyPredicate task_3:SpecialRisk ;
+                           swrl:argument1 :t ;
+                           swrl:argument2 30
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ swrla:isRuleEnabled "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "SpecialRisk2" ;
+   rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate task_3:Transaction ;
+                           swrl:argument1 :t
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate task_3:hasCreditcard ;
+                                      swrl:argument1 :t ;
+                                      swrl:argument2 :card
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                 swrl:propertyPredicate task_3:hasCardholder ;
+                                                 swrl:argument1 :card ;
+                                                 swrl:argument2 :ch
+                                               ] ;
+                                     rdf:rest [ rdf:type swrl:AtomList ;
+                                                rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                            swrl:propertyPredicate task_3:locatedIn ;
+                                                            swrl:argument1 :ch ;
+                                                            swrl:argument2 :c
+                                                          ] ;
+                                                rdf:rest [ rdf:type swrl:AtomList ;
+                                                           rdf:first [ rdf:type swrl:DifferentIndividualsAtom ;
+                                                                       swrl:argument1 :c ;
+                                                                       swrl:argument2 task_3:switzerland
+                                                                     ] ;
+                                                           rdf:rest rdf:nil
+                                                         ]
+                                              ]
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                           swrl:propertyPredicate task_3:SpecialRisk ;
+                           swrl:argument1 :t ;
+                           swrl:argument2 0
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
