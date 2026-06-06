@@ -56,4 +56,16 @@ WHERE {
 	?merchant task_3:merchantLocatedIn task_3:italy .
 }
 
+# 6. Retrieve all the transaction that belongs to A_transaction
+SELECT ?transaction
+WHERE {
+	?transaction rdf:type task_3:A_Transaction.
+}
+
+# 7. Retrieve all the transaction that belongs to B_transaction
+SELECT ?transaction
+WHERE {
+	?transaction rdf:type task_3:A_Transaction.
+}
+
 
