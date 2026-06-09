@@ -62,10 +62,24 @@ WHERE {
 	?transaction rdf:type task_3:A_Transaction.
 }
 
-# 7. Retrieve all the transaction that belongs to B_transaction
+# 7. Retrieve all the transaction that belongs to B_transaction FAKE
 SELECT ?transaction
 WHERE {
-	?transaction rdf:type task_3:A_Transaction.
+	?transaction rdf:type task_3:B_Transaction.
 }
 
+#8 Retrieve all the transaction that belongs to B_transaction - ESCAMOTAGE 
 
+SELECT ?transaction
+WHERE {
+# 1. Select all the transaction
+?transaction a task_3:Transaction .
+
+# 2. Try to assign typeA if they are A_tipe
+OPTIONAL {
+?transaction rdf:type task_3:A_Transaction.
+?transaction rdf:type ?typeA .
+}
+# 3. Select all the variables with empty typeA variable
+FILTER (!BOUND(?typeA))
+}
