@@ -1,6 +1,7 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %KE prolog exam Lerco Peruzzi
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 %
 %Assertions
 
@@ -118,22 +119,47 @@ cardholder(c1, mensoni, italy).
 cardholder(c2, meyer, germany).
 cardholder(c3, suter, switzerland).
 cardholder(c4, abba, tanzania).
+cardholder(c5, miller, germany).
 
-merchant(m1, worldofafrica, south_africa, physical).
-merchant(m2, windsofthedeserts, morocco, physical).
-merchant(m3, mamaafrica, south_africa, physical).
+creditcard(c1, 1111).
+creditcard(c2, 2222).
+creditcard(c3, 3333).
+creditcard(c4, 4444).
+creditcard(c5, 5555).
+
+merchant(m1, worldofafrica, south_africa, phisical).
+merchant(m2, windsofthedeserts, morocco, phisical).
+merchant(m3, mamaafrica, south_africa, phisical).
+merchant(m4, southAfricaMasterPieces, south_africa, online).
 
 
-transaction(tx1, c1, m1, 11234, 1715097900). %ora sono le 18.05 07.05.2026
-transaction(tx2, c2, m2, 12, 1715097950).
-transaction(tx3, c3, m3, 90, 1715098950).
+
+transaction(tx1, 1111, m1, 11234, 1715097900). %ora sono le 18.05 07.05.2026
+transaction(tx2, 2222, m2, 12, 1715097950).
+transaction(tx3, 3333, m3, 90, 1715098950).
 
 %tx1,tx4 suspected
-transaction(tx4, c1, m2, 12, 1715097950).
+transaction(tx4, 1111, m2, 12, 1715097950).
 
 %tx1, tx5 not suspected
-transaction(tx5, c1, m2, 12, 1715098950).
+transaction(tx5, 1111, m2, 12, 1715098950).
 %rules
+transaction(tx6, 5555, m4, 102, 1780783600).
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%Type sorter
+%%%%%%%%%%%%%%%%%%%%%%%
+transactionType(Trans, a):- 
+    transaction(Trans, _, MerchantID, _, _),
+    merchant(MerchantID, _, _, online).
+
+transactionType(Trans, b) :-
+    transaction(Trans, _, _, _, _),
+    \+ transactionType(Trans, a).
+
+%allTransaction(Type,Transactions):-
+    
+    
 
 %%%%%%%%%%%%%%%%%%%%%%%
 %Merchant location risk
@@ -194,31 +220,12 @@ special_risk(_,_,0).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%
-%Transaction comparison
-%%%%%%%%%%%%%%%%%%%%%%% 
-
-score_risk_comparison(T1, T2):-
-    transaction(T1, CardholderID, Merchant1, _, Time1),
-    transaction(T2, CardholderID, Merchant2, _, Time2),
-    merchant(Merchant1, _, Country1, physical),
-    merchant(Merchant2, _, Country2, physical),
-    T1 \= T2,
-    Country1 \= Country2,
-    D is abs(Time1-Time2),
-    D =< 300.
-
-time_comparison(T, 150) :-
-    transaction(T,_,_,_,_),
-    score_risk_comparison(T,_),!.
-
-time_comparison(_,0).
-
-%%%%%%%%%%%%%%%%%%%%%%%
-%Summation
+%summation
 %%%%%%%%%%%%%%%%%%%%%%%   	
 
 score_risk(TransactionID, Score) :-
-    transaction(TransactionID, CardholderID, MerchantID, Amount, _ ),
+    transaction(TransactionID, Cardnumber, MerchantID, Amount, _ ),
+    creditcard(CardholderID, Cardnumber),
     cardholder(CardholderID, _ , CardholderCountry),
     merchant(MerchantID, _ , MerchantCountry,_),
     cardholder_risk(CardholderCountry, CR),
@@ -228,7 +235,7 @@ score_risk(TransactionID, Score) :-
     time_comparison(TransactionID, TC),
     Score is CR + MR + AR + SR +TC.
 
-
+    
 %%%%%%%%%%%%%%%%%%%%%%%
 %Detection
 %%%%%%%%%%%%%%%%%%%%%%% 
@@ -240,12 +247,36 @@ detect(TransactionID, accepted, Score):-
 detect(TransactionID, stopped, Score):-
     score_risk(TransactionID, Score),
     Score > 100,
-    Score =< 150.
+    Score < 150.
 
 detect(TransactionID, rejected, Score):-
     score_risk(TransactionID, Score),
-    Score > 150.
+    Score >= 150.
     
+
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%Transaction comparison
+%%%%%%%%%%%%%%%%%%%%%%% 
+
+score_risk_comparison(T1, T2):-
+    transaction(T1, Cardnumber, Merchant1, _, Time1),
+    transaction(T2, Cardnumber, Merchant2, _, Time2),
+    merchant(Merchant1, _, Country1, phisical),
+    merchant(Merchant2, _, Country2, phisical),
+    T1 \= T2,
+    Country1 \= Country2,
+    D is abs(Time1-Time2),
+    D =< 300.
+    %score_risk(T1, Score),
+    %Result is max(Score, 150),!.
+
+time_comparison(T, 150) :-
+    transaction(T, _,_,_,_),
+    score_risk_comparison(T,_),!.
+
+time_comparison(_, 0).
+
 
 %%%%%%%%%%%%%%%%%%%%%%%
 %Use instruction
@@ -257,3 +288,19 @@ detect(TransactionID, rejected, Score):-
 
 %Example
 % detect(tx1, X, Y).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
