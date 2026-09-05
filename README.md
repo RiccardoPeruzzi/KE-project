@@ -2,7 +2,7 @@
 
 This repository contains the full implementation of a fraud detection system developed as part of the university project in Knowledge Engineering.
 
-The project explores multiple paradigms—decision tables, logic programming, ontology engineering, and semantic querying—to design a smart system capable of evaluating financial transactions and identifying suspicious patterns based on geographic, economic, and behavioral risk indicators.
+The project explores multiple paradigms : decision tables, logic programming, ontology engineering, and semantic querying. The goal was to design a smart system capable of evaluating financial transactions and identifying suspicious patterns based on geographic, economic, and behavioral risk indicators.
 
 ## Overview
 
@@ -54,8 +54,9 @@ KE-project/
 ├── Protege/
 │   ├── Fraud_detection.ttl
 │   └── Query.txt
-├── ProjectDescription.pdf
-├── Report.pdf
+├── Report/
+│   ├── ProjectDescription.pdf
+│   └── Report.pdf   
 ├── README.md
 └── .git/
 ```
